@@ -6,7 +6,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.2
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -135,6 +135,10 @@ The installation process for the plugin is standard and user-friendly. Please in
 2. Go to **Media > Media Recovery** and you will see the newly restored image.
 
 ## CHANGELOG
+
+= 1.5.8 =
+
+- Update - PHP 8.3 compatibility check
 
 = 1.5.7 =
 
