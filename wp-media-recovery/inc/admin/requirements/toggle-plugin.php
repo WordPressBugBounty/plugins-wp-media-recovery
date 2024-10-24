@@ -29,7 +29,7 @@ add_action( 'activated_plugin', __NAMESPACE__ . '\mlr_activate_plugin' );
  */
 function mlr_deactivate_plugin( $plugin_file_path ) {
 	if ( MLR_PLUGIN_BASENAME === $plugin_file_path ) {
-		delete_option( 'mlr_rating_notice' );
+		// delete_option( 'mlr_rating_notice' );
 		delete_option( 'mlr_upgrade_notice' );
 	}
 }
