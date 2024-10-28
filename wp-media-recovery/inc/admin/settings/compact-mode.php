@@ -32,27 +32,31 @@ function mlr_display_compact_mode() {
 	?>
 		<p class="description">
 			<small>
-				<?php echo esc_html__( 'Compact mode will add a sub-menu to Media.', 'media-library-recovery' ); ?>
+				<?php echo esc_html__( 'Compact mode will add a sub-menu to Media.', 'wp-media-recovery' ); ?>
 			</small>
 		</p>
 	<?php
 }
 
 function mlr_sanitize_compact_mode( $compact_mode ) {
-	if ( empty( $_REQUEST['mlr_nonce'] )
-		|| ! wp_verify_nonce( $_REQUEST['mlr_nonce'], 'mlr_security' ) ) {
+	// Verify the nonce.
+	$_wpnonce = ( isset( $_REQUEST['mlr_wpnonce'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['mlr_wpnonce'] ) ) : '';
+
+	if ( empty( $_wpnonce ) || ! wp_verify_nonce( $_wpnonce, 'mlr_settings_nonce' ) ) {
 		return;
 	}
 
+	// Nothing selected.
 	if ( empty( $compact_mode ) ) {
 		return;
 	}
 
+	// Option changed and updated.
 	if ( get_option( 'mlr_compact_mode', '' ) !== $compact_mode ) {
 		add_settings_error(
 			'mlr_settings_errors',
 			'mlr_compact_mode',
-			esc_html__( 'Compact mode option was updated successfully.', 'media-library-recovery' ),
+			esc_html__( 'Compact mode option was updated successfully.', 'wp-media-recovery' ),
 			'updated'
 		);
 	}

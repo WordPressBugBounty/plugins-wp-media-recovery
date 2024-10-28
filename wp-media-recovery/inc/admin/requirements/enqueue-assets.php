@@ -49,7 +49,7 @@ function mlr_enqueue_admin_assets() {
 			'plugin_url'    => MLR_PLUGIN_DIR_URL,
 			'plugin_domain' => MLR_PLUGIN_DOMAIN,
 			'ajax_url'      => esc_url( admin_url( 'admin-ajax.php' ) ),
-			'ajax_nonce'    => wp_create_nonce( 'mlr-ajax-nonce' ),
+			'ajax_nonce'    => wp_create_nonce( 'mlr_ajax_nonce' ),
 		)
 	);
 }

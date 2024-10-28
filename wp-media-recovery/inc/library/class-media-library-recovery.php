@@ -105,11 +105,7 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 			$html = '';
 
 			// Pagination.
-			$current_page = 1;
-
-			if ( array_key_exists( 'p', $_REQUEST ) ) {
-				$current_page = sanitize_text_field( $_REQUEST['p'] );
-			}
+			$current_page = ( isset( $_REQUEST['p'] ) ) ? sanitize_text_field( wp_unslash( $_REQUEST['p'] ) ) : 1;
 
 			$results_per_page = $this->results_per_page;
 			$results_from     = ( 0 === $current_page ) ? 1 : ( $current_page * $results_per_page ) - $results_per_page;
@@ -255,21 +251,29 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 		 * Get ALL posts from the supported types defined earlier.
 		 */
 		public function get_posts_supported() {
-			global $wpdb;
+			// Create a unique cache key based on the supported post types
+			$cache_key = 'mlr_posts_supported_' . md5( implode( '_', $this->post_types_supported ) );
 
-			$post_types_supported = implode( "', '", array_map( 'esc_sql', $this->post_types_supported ) );
+			// Try to get cached data
+			$posts_supported = wp_cache_get( $cache_key, 'mlr_cache_group' );
 
-			$query = $wpdb->prepare(
-				"
-					SELECT ID, post_content 
-					FROM {$wpdb->posts} 
-					WHERE post_type IN ('{$post_types_supported}') 
-					AND post_status = %s
-				",
-				'publish'
-			);
+			if ( false === $posts_supported ) {
+				// If no cached data, retrieve posts using get_posts()
+				$args = array(
+					'post_type'   => implode( "', '", array_map( 'esc_sql', $this->post_types_supported ) ),
+					'post_status' => 'publish',
+					'fields'      => 'ID, content',
+					'numberposts' => -1,
+				);
 
-			return $wpdb->get_results( $query );
+				// Retrieve the posts
+				$posts_supported = get_posts( $args );
+
+				// Store the result in cache
+				wp_cache_set( $cache_key, $posts_supported, 'mlr_cache_group', 3600 ); // Cached for 1 hour
+			}
+
+			return $posts_supported;
 		}
 
 		/**

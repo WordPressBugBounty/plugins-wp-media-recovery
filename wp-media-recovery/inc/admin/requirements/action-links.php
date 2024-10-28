@@ -24,10 +24,10 @@ function mlr_add_action_links( $links, $file_path ) {
 			: 'upload.php?page=mlr_settings';
 
 		$links['mlr-settings'] = '<a href="' . esc_url( admin_url( $admin_page ) ) . '">'
-			. esc_html__( 'Settings', 'media-library-recovery' )
+			. esc_html__( 'Settings', 'wp-media-recovery' )
 			. '</a>';
 		$links['mlr-upgrade']  = '<a href="https://bit.ly/3wMEF6c" target="_blank">'
-		. esc_html__( 'Go Pro', 'media-library-recovery' )
+		. esc_html__( 'Go Pro', 'wp-media-recovery' )
 		. '</a>';
 
 		return array_reverse( $links );

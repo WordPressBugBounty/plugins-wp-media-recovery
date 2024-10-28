@@ -72,8 +72,8 @@ if ( ! class_exists( 'MLR_Admin' ) ) {
 		 */
 		public function get_invalid_user_cap() {
 			/* translators: %1$s is replaced with Access denied */
-			$message    = esc_html__( '%1$s! Access denied! Current user does not have the capabilities to access this function.', 'media-library-recovery' );
-			$values_arr = array( '<strong>' . esc_html__( 'Access denied', 'media-library-recovery' ) . '</strong>' );
+			$message    = esc_html__( '%1$s! Access denied! Current user does not have the capabilities to access this function.', 'wp-media-recovery' );
+			$values_arr = array( '<strong>' . esc_html__( 'Access denied', 'wp-media-recovery' ) . '</strong>' );
 
 			if ( ! $this->check_user_cap() ) {
 				$this->print_json_message(
@@ -88,7 +88,7 @@ if ( ! class_exists( 'MLR_Admin' ) ) {
 		 * Check the validity of the nonce token for the plugin's AJAX requests.
 		 */
 		public function check_nonce_token() {
-			if ( ! check_ajax_referer( 'mlr-ajax-nonce', 'security', false ) ) {
+			if ( ! check_ajax_referer( 'mlr_ajax_nonce', '_wpnonce', false ) ) {
 				return false;
 			}
 
@@ -102,9 +102,9 @@ if ( ! class_exists( 'MLR_Admin' ) ) {
 		public function get_invalid_nonce_token() {
 			/* translators: %1$s is replaced with Invalid security toke */
 			/* translators: %2$s is replaced with link to Support email */
-			$message    = esc_html__( '%1$s! Contact us @ %2$s.', 'media-library-recovery' );
+			$message    = esc_html__( '%1$s! Contact us @ %2$s.', 'wp-media-recovery' );
 			$values_arr = array(
-				'<strong>' . esc_html__( 'Invalid security token', 'media-library-recovery' ) . '</strong>',
+				'<strong>' . esc_html__( 'Invalid security token', 'wp-media-recovery' ) . '</strong>',
 				'<a href="mailto:contact@' . MLR_PLUGIN_DOMAIN . '">contact@' . MLR_PLUGIN_DOMAIN . '</a>',
 			);
 

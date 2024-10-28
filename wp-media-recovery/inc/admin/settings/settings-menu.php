@@ -20,8 +20,8 @@ function mlr_add_menu() {
 
 	if ( '' === $mlr->compact_mode ) {
 		add_menu_page(
-			esc_html__( 'Media Library Recovery', 'media-library-recovery-pro' ),
-			esc_html__( 'Media Recovery', 'media-library-recovery-pro' ),
+			esc_html__( 'Media Library Recovery', 'wp-media-recovery' ),
+			esc_html__( 'Media Recovery', 'wp-media-recovery' ),
 			'manage_options',
 			MLR_SETTINGS_SLUG,
 			__NAMESPACE__ . '\mlr_display_settings_page',
@@ -31,8 +31,8 @@ function mlr_add_menu() {
 	} else {
 		add_submenu_page(
 			'upload.php',
-			esc_html__( 'Media Library Recovery', 'media-library-recovery-pro' ),
-			esc_html__( 'Media Recovery', 'media-library-recovery-pro' ),
+			esc_html__( 'Media Library Recovery', 'wp-media-recovery' ),
+			esc_html__( 'Media Recovery', 'wp-media-recovery' ),
 			'manage_options',
 			MLR_SETTINGS_SLUG,
 			__NAMESPACE__ . '\mlr_display_settings_page'

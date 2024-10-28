@@ -3,12 +3,12 @@
  * Plugin Name: Media Library Recovery
  * Plugin URI: https://mediarecoveryplugin.com/
  * Description: A tool that helps you restore and recover images from your <strong>wp-content/uploads</strong> folder after a database failure or reset.
- * Version: 1.5.8.3
+ * Version: 1.5.9
  * Author: Krasen Slavov
  * Author URI: https://developry.com/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: media-library-recovery
+ * Text Domain: wp-media-recovery
  * Domain Path: /lang
  *
  * Copyright (c) 2018 - 2024 Developry Ltd. (email: contact@developry.com)
@@ -37,9 +37,9 @@ define( __NAMESPACE__ . '\MLR_MIN_PHP_VERSION', '7.2' );
 define( __NAMESPACE__ . '\MLR_MIN_WP_VERSION', '5.0' );
 
 define( __NAMESPACE__ . '\MLR_PLUGIN_UUID', 'mlr' );
-define( __NAMESPACE__ . '\MLR_PLUGIN_TEXTDOMAIN', 'media-library-recovery' );
-define( __NAMESPACE__ . '\MLR_PLUGIN_NAME', esc_html__( 'Media Library Recovery', 'media-library-recovery' ) );
-define( __NAMESPACE__ . '\MLR_PLUGIN_VERSION', '1.5.8.3' );
+define( __NAMESPACE__ . '\MLR_PLUGIN_TEXTDOMAIN', 'wp-media-recovery' );
+define( __NAMESPACE__ . '\MLR_PLUGIN_NAME', esc_html__( 'Media Library Recovery', 'wp-media-recovery' ) );
+define( __NAMESPACE__ . '\MLR_PLUGIN_VERSION', '1.5.9' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_DOMAIN', 'mediarecoveryplugin.com' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_DOCS', 'https://mediarecoveryplugin.com/help' );
 

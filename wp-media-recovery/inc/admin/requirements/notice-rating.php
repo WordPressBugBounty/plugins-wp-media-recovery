@@ -28,23 +28,23 @@ function mlr_display_rating_notice() {
 					printf(
 						wp_kses(
 							/* translators: %1$s is replaced with by giving it 5 stars rating */
-							__( '✨💪🔌 Could you please kindly help the plugin in your turn %1$s? (Thank you in advance) ' ),
+							__( '✨💪🔌 Could you please kindly help the plugin in your turn %1$s? (Thank you in advance)', 'wp-media-recovery' ),
 							json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 						),
-						'<strong>' . esc_html__( 'by giving it 5 stars rating', 'media-library-recovery' ) . '</strong>'
+						'<strong>' . esc_html__( 'by giving it 5 stars rating', 'wp-media-recovery' ) . '</strong>'
 					);
 					?>
 				</p>
 				<div class="button-group">
 					<a href="<?php echo esc_url( MLR_PLUGIN_WPORG_RATE ); ?>" target="_blank" class="button button-primary">
-						<?php echo esc_html__( 'Rate us @ WordPress.org', 'media-library-recovery' ); ?>
+						<?php echo esc_html__( 'Rate us @ WordPress.org', 'wp-media-recovery' ); ?>
 						<i class="dashicons dashicons-external"></i>
 					</a>
 					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'mlr_settings', 'action' => 'mlr_dismiss_rating_notice', '_wpnonce' => wp_create_nonce( 'mlr_rating_notice_nonce' ) ), admin_url( $admin_page ) ) ); ?>" class="button">
-						<?php echo esc_html__( 'I already did', 'media-library-recovery' ); ?>
+						<?php echo esc_html__( 'I already did', 'wp-media-recovery' ); ?>
 					</a>
 					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'mlr_settings', 'action' => 'mlr_dismiss_rating_notice', '_wpnonce' => wp_create_nonce( 'mlr_rating_notice_nonce' ) ), admin_url( $admin_page ) ) ); ?>" class="button">
-						<?php echo esc_html__( "Don't show this notice again!", 'media-library-recovery' ); ?>
+						<?php echo esc_html__( "Don't show this notice again!", 'wp-media-recovery' ); ?>
 					</a>
 				</div>
 			</div>

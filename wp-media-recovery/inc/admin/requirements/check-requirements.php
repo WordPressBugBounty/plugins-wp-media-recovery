@@ -39,7 +39,7 @@ function mlr_check_requirements() {
 				/* translators: %1$s is replaced with "Plugin Name" */
 				/* translators: %2$s is replaced with "Min PHP Version" */
 				/* translators: %3$s is replaced with "Min WP Version" */
-				__( '%1$s requires a minimum of PHP %2$s and WordPress %3$s', 'media-library-recovery' ),
+				__( '%1$s requires a minimum of PHP %2$s and WordPress %3$s', 'wp-media-recovery' ),
 				json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 			),
 			'<strong>' . MLR_PLUGIN_NAME . '</strong>',
@@ -51,7 +51,7 @@ function mlr_check_requirements() {
 			wp_kses(
 				/* translators: %1$s is replaced with "PHP Version" */
 				/* translators: %2$s is replaced with "WordPress Version" */
-				__( 'You are currently running PHP %1$s and WordPress %2$s.', 'media-library-recovery' ),
+				__( 'You are currently running PHP %1$s and WordPress %2$s.', 'wp-media-recovery' ),
 				json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 			),
 			'<strong>' . PHP_VERSION . '</strong>',

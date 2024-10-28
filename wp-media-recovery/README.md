@@ -6,7 +6,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.2
-Stable tag: 1.5.8.3
+Stable tag: 1.5.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,6 +136,22 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 ## CHANGELOG
 
+= 1.5.9 =
+
+- Fix - Mismatched text domain.
+- Fix - Missing `$domain` parameter in function call.
+- Fix - Not unslashed before sanitization. Use `wp_unslash()` or similar.
+- Fix - Detected usage of a non-sanitized input variable.
+- Fix - All output should be run through an escaping function.
+- Fix - Detected usage of a possibly undefined superglobal array index. Use `isset()` or `empty()` to check the index exists before using it.
+- Update - Replace all php files end of line sequence from `CRLF` to `LF`.
+- Update - Don't show up the rating notice when toggle plugin activate/deactivate. 
+- Update - Replace `MLR_PLUGIN_DOMAIN` with krasenslavov.com in Settings main page.
+- Update - Make `_wpnonce` standard throughout the plugin php and js files.
+- Update - `get_posts_supported()` to use `get_posts()` instead of direct db call with `$wpdb->prepare()`.
+- Update - Update the correct support ticket link with `MLR_PLUGIN_WPORG_SUPPORT`.
+- Update - Regenerate the .pot file.
+
 = 1.5.8 =
 
 - Update - PHP 8.3 compatibility check
@@ -239,7 +255,7 @@ The installation process for the plugin is standard and user-friendly. Please in
 - Update - Remove some of classes and convert to function based
 - Update - CSS and some general styling
 
-= 1.4 =
+= 1.4.0 =
 
 - New - Add new development workflow and structure
 - New - Change namespace to match the developry structure
@@ -255,19 +271,19 @@ The installation process for the plugin is standard and user-friendly. Please in
 - Update - Move back all styles using SASS and SCSS files
 - Fix - Skip `..` and `.` when looping the iterator
 
-= 1.3 =
+= 1.3.0 =
 
 - Update - Add proper translation stings
 - Update - Plugin `.pot` file in `/lang` folder
 - Update - Test and check functionality with WordPress 6.1
 - Update - Test and check functionality with WordPress 6.0
 
-= 1.2 =
+= 1.2.0 =
 
 - Update - Improved UI and functionality
 - Update - Better UX and new plugin framework
 
-= 1.1 =
+= 1.1.0 =
 
 - Update - Total revision of the plugin with improved code and UI
 - Fix - Added pagination with showing a maximum of 30 images per page

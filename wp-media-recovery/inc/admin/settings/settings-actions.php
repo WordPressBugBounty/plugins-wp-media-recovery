@@ -22,9 +22,11 @@ function mlr_recover_media() {
 	$mlr_admin->get_invalid_nonce_token();
 	$mlr_admin->get_invalid_user_cap();
 
-	$image_files = array_map( 'sanitize_text_field', json_decode( stripslashes( $_REQUEST['image_files'] ), true ) );
+	// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+	$image_files = ( isset( $_REQUEST['image_files'] ) ) ? json_decode( wp_unslash( $_REQUEST['image_files'] ), true ) : '';
+	$image_files = array_map( 'sanitize_text_field', $image_files );
 
-	if ( is_array( $image_files ) ) {
+	if ( ! empty( $image_files ) && is_array( $image_files ) ) {
 		foreach ( $image_files as $image_file ) {
 			$mlr->rebuild_media_file( $image_file );
 		}
@@ -33,11 +35,11 @@ function mlr_recover_media() {
 			1,
 			/* translators: %1$s is replaced with media item(s)! */
 			/* translators: %2$s is replaced with Media Library */
-			__( 'You have successfully recovered %1$s! Go to your %2$s to view the newly recovered files.' ),
+			__( 'You have successfully recovered %1$s! Go to your %2$s to view the newly recovered files.', 'wp-media-recovery' ),
 			array(
-				'<em>' . esc_html( sizeof( $image_files ) . ' image(s)', 'media-library-recovery' ) . '</em><br />',
+				'<em>' . esc_html( sizeof( $image_files ) . ' image(s)', 'wp-media-recovery' ) . '</em><br />',
 				'<a href="' . esc_url( admin_url( 'upload.php' ) ) . '" target="_blank"><strong>'
-					. esc_html__( 'Media Library', 'media-library-recovery' )
+					. esc_html__( 'Media Library', 'wp-media-recovery' )
 					. '</strong></a>',
 			)
 		);
@@ -45,7 +47,7 @@ function mlr_recover_media() {
 
 	$mlr_admin->print_json_message(
 		0,
-		__( 'Something went wrong!' ),
+		__( 'Something went wrong!', 'wp-media-recovery' ),
 	);
 }
 

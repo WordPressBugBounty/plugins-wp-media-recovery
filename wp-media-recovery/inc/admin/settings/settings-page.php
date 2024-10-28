@@ -30,7 +30,7 @@ function mlr_display_settings_page() {
 	add_settings_field(
 		'mlr_compact_mode',
 		'<label for="mlr-compact-mode">'
-			. __( 'Compact Mode', 'media-library-recovery' )
+			. __( 'Compact Mode', 'wp-media-recovery' )
 			. '</label>',
 		__NAMESPACE__ . '\mlr_display_compact_mode',
 		MLR_SETTINGS_SLUG,
