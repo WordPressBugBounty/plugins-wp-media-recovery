@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -28,13 +28,12 @@ register_activation_hook( MLR_PLUGIN_BASENAME, __NAMESPACE__ . '\mlr_check_pro_p
  * Display a promotion for the pro plugin.
  */
 function mlr_display_upgrade_notice() {
-	if ( get_option( 'mlr_upgrade_notice' ) && get_transient( 'mlr_upgrade_plugin' ) ) {
+	$mlr_admin = new MLR_Admin();
+
+	if ( get_option( 'mlr_upgrade_notice' )
+		&& get_transient( 'mlr_upgrade_plugin' ) ) {
 		return;
 	}
-
-	$mlr = new Media_Library_Recovery();
-
-	$admin_page = ( '' === $mlr->compact_mode ) ? 'admin.php' : 'upload.php';
 	?>
 		<div class="notice notice-success is-dismissible mlr-admin">
 			<h3><?php echo esc_html__( 'Media Library Recovery PRO 🚀', 'wp-media-recovery' ); ?></h3>
@@ -70,10 +69,10 @@ function mlr_display_upgrade_notice() {
 					<?php echo esc_html__( 'Go Pro', 'wp-media-recovery' ); ?>
 					<i class="dashicons dashicons-external"></i>
 				</a>
-				<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'mlr_settings', 'action' => 'mlr_dismiss_upgrade_notice', '_wpnonce' => wp_create_nonce( 'mlr_upgrade_notice_nonce' ) ), admin_url( $admin_page ) ) ); ?>" class="button">
+				<a href="<?php echo esc_url( admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'mlr_upgrade_notice_nonce' ) . '&action=mlr_dismiss_upgrade_notice' ) ); ?>" class="button">
 					<?php echo esc_html__( 'I already did', 'wp-media-recovery' ); ?>
 				</a>
-				<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'mlr_settings', 'action' => 'mlr_dismiss_upgrade_notice', '_wpnonce' => wp_create_nonce( 'mlr_upgrade_notice_nonce' ) ), admin_url( $admin_page ) ) ); ?>" class="button">
+				<a href="<?php echo esc_url( admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'mlr_upgrade_notice_nonce' ) . '&action=mlr_dismiss_upgrade_notice' ) ); ?>" class="button">
 					<?php echo esc_html__( "Don't show this notice again!", 'wp-media-recovery' ); ?>
 				</a>
 			</div>
@@ -84,5 +83,3 @@ function mlr_display_upgrade_notice() {
 	// Set the transient to last for 30 days.
 	set_transient( 'mlr_upgrade_plugin', true, 30 * DAY_IN_SECONDS );
 }
-
-add_action( 'admin_notices', __NAMESPACE__ . '\mlr_display_upgrade_notice' );

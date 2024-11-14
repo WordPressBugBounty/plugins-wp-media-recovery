@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -12,11 +12,10 @@ namespace DEVRY\MLR;
 
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
-$mlr = new Media_Library_Recovery;
+$mlr       = new Media_Library_Recovery();
+$mlr_admin = new MLR_Admin();
 
 $page = isset( $_REQUEST['p'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['p'] ) ) : '';
-
-$admin_page = ( '' === $mlr->compact_mode ) ? 'admin.php?page=mlr_settings&p=' : 'upload.php?page=mlr_settings&p=';
 
 $prev_page     = ( isset( $page ) && $page > 1 ) ? ( $page - 1 ) : 1;
 $next_page     = ( isset( $page ) && $page > 0 ) ? ( $page + 1 ) : 2;
@@ -26,8 +25,8 @@ $total_pages   = ceil( $total_files / $mlr->results_per_page );
 $is_first_page = ( 1 === $curr_page ) ? true : false;
 $is_last_page  = ( $curr_page > $total_pages - 1 ) ? true : false;
 
-$prev_page_url = admin_url( $admin_page . $prev_page );
-$next_page_url = admin_url( $admin_page . $next_page );
+$prev_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' . $prev_page );
+$next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' . $next_page );
 
 ?>
 <div class="mlr-admin">
@@ -327,6 +326,7 @@ $next_page_url = admin_url( $admin_page . $next_page );
 		<hr />
 
 		<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
+			<?php settings_errors( 'mlr_settings_errors' ); ?>
 			<?php wp_nonce_field( 'mlr_settings_nonce', 'mlr_wpnonce' ); ?>
 			<?php
 				settings_fields( MLR_SETTINGS_SLUG );

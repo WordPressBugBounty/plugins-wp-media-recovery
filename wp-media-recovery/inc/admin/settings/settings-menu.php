@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -26,7 +26,7 @@ function mlr_add_menu() {
 			MLR_SETTINGS_SLUG,
 			__NAMESPACE__ . '\mlr_display_settings_page',
 			'dashicons-image-rotate',
-			5.5555
+			9.999
 		);
 	} else {
 		add_submenu_page(

@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -32,6 +32,16 @@ function mlr_check_requirements() {
 		add_action(
 			'admin_enqueue_scripts',
 			__NAMESPACE__ . '\mlr_enqueue_admin_assets'
+		);
+
+		add_action(
+			'admin_notices',
+			__NAMESPACE__ . '\mlr_display_rating_notice'
+		);
+
+		add_action(
+			'admin_notices',
+			__NAMESPACE__ . '\mlr_display_upgrade_notice'
 		);
 	} else {
 		$message = sprintf(

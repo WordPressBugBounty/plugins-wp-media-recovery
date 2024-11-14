@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -16,8 +16,8 @@ namespace DEVRY\MLR;
  * [AJAX] Recover selected media available for recovery.
  */
 function mlr_recover_media() {
-	$mlr       = new Media_Library_Recovery;
-	$mlr_admin = new MLR_Admin;
+	$mlr       = new Media_Library_Recovery();
+	$mlr_admin = new MLR_Admin();
 
 	$mlr_admin->get_invalid_nonce_token();
 	$mlr_admin->get_invalid_user_cap();

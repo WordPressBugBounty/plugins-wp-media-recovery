@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -16,9 +16,15 @@ if ( ! class_exists( 'MLR_Admin' ) ) {
 
 	class MLR_Admin {
 		/**
+		 * Main menu admin page based on the compact mode.
+		 */
+		public $admin_page;
+
+		/**
 		 * Consturtor.
 		 */
 		public function __construct() {
+			$this->admin_page = ( ! get_option( 'mlr_compact_mode', '' ) ) ? 'admin.php?page=' : 'upload.php?page=';
 		}
 
 		/**

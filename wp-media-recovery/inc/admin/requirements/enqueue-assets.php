@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -24,7 +24,7 @@ function mlr_enqueue_admin_assets() {
 	// $screen = get_current_screen();
 	// if ( strpos( $screen->id, 'mlr_' ) ) {}
 
-	$mlr = new Media_Library_Recovery;
+	$mlr = new Media_Library_Recovery();
 
 	wp_enqueue_style(
 		'mlr-admin',

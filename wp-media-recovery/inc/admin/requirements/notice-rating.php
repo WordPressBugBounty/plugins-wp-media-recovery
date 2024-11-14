@@ -4,7 +4,7 @@
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2024, Developry Ltd.
- * @license    https://www.gnu.org/licenses/gpl-2.0.html GNU Public License
+ * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
 
@@ -16,10 +16,9 @@ namespace DEVRY\MLR;
  * Add plugin rating notice to get some feedback for users.
  */
 function mlr_display_rating_notice() {
-	if ( ! get_option( 'mlr_rating_notice', '' ) ) {
-		$mlr = new Media_Library_Recovery;
+	$mlr_admin = new MLR_Admin();
 
-		$admin_page = ( '' === $mlr->compact_mode ) ? 'admin.php' : 'upload.php';
+	if ( ! get_option( 'mlr_rating_notice', '' ) ) {
 		?>
 			<div class="notice notice-info is-dismissible mlr-admin">
 				<h3><?php echo esc_html( MLR_PLUGIN_NAME ); ?></h3>
@@ -40,10 +39,10 @@ function mlr_display_rating_notice() {
 						<?php echo esc_html__( 'Rate us @ WordPress.org', 'wp-media-recovery' ); ?>
 						<i class="dashicons dashicons-external"></i>
 					</a>
-					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'mlr_settings', 'action' => 'mlr_dismiss_rating_notice', '_wpnonce' => wp_create_nonce( 'mlr_rating_notice_nonce' ) ), admin_url( $admin_page ) ) ); ?>" class="button">
+					<a href="<?php echo esc_url( admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'mlr_rating_notice_nonce' ) . '&action=mlr_dismiss_rating_notice' ) ); ?>" class="button">
 						<?php echo esc_html__( 'I already did', 'wp-media-recovery' ); ?>
 					</a>
-					<a href="<?php echo esc_url( add_query_arg( array( 'page' => 'mlr_settings', 'action' => 'mlr_dismiss_rating_notice', '_wpnonce' => wp_create_nonce( 'mlr_rating_notice_nonce' ) ), admin_url( $admin_page ) ) ); ?>" class="button">
+					<a href="<?php echo esc_url( admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&_wpnonce=' . wp_create_nonce( 'mlr_rating_notice_nonce' ) . '&action=mlr_dismiss_rating_notice' ) ); ?>" class="button">
 						<?php echo esc_html__( "Don't show this notice again!", 'wp-media-recovery' ); ?>
 					</a>
 				</div>
@@ -51,5 +50,3 @@ function mlr_display_rating_notice() {
 		<?php
 	}
 }
-
-add_action( 'admin_notices', __NAMESPACE__ . '\mlr_display_rating_notice' );
