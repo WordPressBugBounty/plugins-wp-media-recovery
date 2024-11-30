@@ -1,16 +1,16 @@
 # Media Library Recovery - A tool that helps you recover and restore images from your `wp-content/uploads` folder after a database failure or reset.
 # Copyright (c) 2024 Media Library Recovery
 # This file is distributed under the same license as the plugin, GPLv3 or later.
-# Krasen Slavov <contact@mediarecoveryplugin.com>, 2024.
+# Krasen Slavov <contact@developry.com>, 2024.
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.4\n"
-"Report-Msgid-Bugs-To: Media Library Recovery <contact@mediarecoveryplugin.com>\n"
+"Report-Msgid-Bugs-To: Media Library Recovery <contact@developry.com>\n"
 "POT-Creation-Date: 2023-03-19 17:19+0200\n"
 "PO-Revision-Date: 2024-11-14 17:19+0200\n"
-"Last-Translator: Krasen Slavov <contact@mediarecoveryplugin.com>\n"
-"Language-Team: MLR <contact@mediarecoveryplugin.com>\n"
+"Last-Translator: Krasen Slavov <contact@developry.com>\n"
+"Language-Team: MLR <contact@developry.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

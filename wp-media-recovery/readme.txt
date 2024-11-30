@@ -1,4 +1,4 @@
-### Media Library Recovery
+### Library Recovery: Restore Missing Media After Database Resets
 
 Contributors: krasenslavov, developry
 Donate Link: https://krasenslavov.com/hire-krasen/
@@ -6,7 +6,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -136,6 +136,10 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 ## CHANGELOG
 
+= 1.6.1 =
+
+- Update - Performance and optimization compatibility
+
 = 1.6.0 =
 
 - New - Add compact mode toggle under settings option
@@ -146,12 +150,6 @@ The installation process for the plugin is standard and user-friendly. Please in
 
 = 1.5.9 =
 
-- Fix - Mismatched text domain
-- Fix - Missing `$domain` parameter in function call
-- Fix - Not unslashed before sanitization. Use `wp_unslash()` or similar
-- Fix - Detected usage of a non-sanitized input variable
-- Fix - All output should be run through an escaping function
-- Fix - Detected usage of a possibly undefined superglobal array index. Use `isset()` or `empty()` to check the index exists before using it
 - Update - Replace all php files end of line sequence from `CRLF` to `LF`
 - Update - Don't show up the rating notice when toggle plugin activate/deactivate
 - Update - Replace `MLR_PLUGIN_DOMAIN` with krasenslavov.com in Settings main page
@@ -159,6 +157,12 @@ The installation process for the plugin is standard and user-friendly. Please in
 - Update - `get_posts_supported()` to use `get_posts()` instead of direct db call with `$wpdb->prepare()`
 - Update - Update the correct support ticket link with `MLR_PLUGIN_WPORG_SUPPORT`
 - Update - Regenerate the .pot file
+- Fix - Mismatched text domain
+- Fix - Missing `$domain` parameter in function call
+- Fix - Not unslashed before sanitization. Use `wp_unslash()` or similar
+- Fix - Detected usage of a non-sanitized input variable
+- Fix - All output should be run through an escaping function
+- Fix - Detected usage of a possibly undefined superglobal array index. Use `isset()` or `empty()` to check the index exists before using it
 
 = 1.5.8 =
 
