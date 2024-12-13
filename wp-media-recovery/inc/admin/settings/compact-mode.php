@@ -35,7 +35,7 @@ function mlr_display_compact_mode() {
 	?>
 		<p class="description">
 			<small>
-				<?php echo esc_html__( 'Compact mode will add a sub-menu to Media.', 'wp-media-recovery' ); ?>
+				<?php echo esc_html__( 'Compact mode moves the plugin access link under Media.', 'wp-media-recovery' ); ?>
 			</small>
 		</p>
 	<?php

@@ -33,8 +33,8 @@ function mlr_recover_media() {
 
 		$mlr_admin->print_json_message(
 			1,
-			/* translators: %1$s is replaced with media item(s)! */
-			/* translators: %2$s is replaced with Media Library */
+			/* translators: %1$s is replaced with "# media item(s)" */
+			/* translators: %2$s is replaced with "Media Library" */
 			__( 'You have successfully recovered %1$s! Go to your %2$s to view the newly recovered files.', 'wp-media-recovery' ),
 			array(
 				'<em>' . esc_html( sizeof( $image_files ) . ' image(s)', 'wp-media-recovery' ) . '</em><br />',

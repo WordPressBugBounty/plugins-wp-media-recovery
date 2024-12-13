@@ -69,7 +69,7 @@ function mlr_check_requirements() {
 		);
 
 		printf(
-			/* translators: %1$s is replaced with PHP and WordPress message check */
+			/* translators: %1$s is replaced with "PHP and WordPress message check" */
 			'<div class="notice notice-error is-dismissible"><p>%1$s</p></div>',
 			wp_kses( $message, json_decode( WFL_PLUGIN_ALLOWED_HTML_ARR, true ) )
 		);

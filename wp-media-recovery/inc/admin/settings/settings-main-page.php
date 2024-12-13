@@ -36,7 +36,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				<?php echo esc_html__( 'Get the PRO version today!', 'wp-media-recovery' ); ?>
 			</h4>
 			<p>
-				<?php echo esc_html__( 'With the PRO version you will get a lot more features with better performance and quicker recovery process.', 'wp-media-recovery' ); ?>
+				<?php echo esc_html__( 'The PRO version offers more features, improved performance, and a faster recovery process.', 'wp-media-recovery' ); ?>
 			</p>
 
 			<table>
@@ -144,17 +144,17 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				<?php
 				printf(
 					wp_kses(
-						/* translators: %1$s is replaced with wp-content/uploads */
-						__( 'A tool that helps you recover and restore images from your %1$s folder after a database failure or reset.', 'wp-media-recovery' ),
+						/* translators: %1$s is replaced with "wp-content/uploads" */
+						__( 'A tool to restore and recover images from your %1$s folder after database resets or failures, ensuring your media library is rebuilt quickly.', 'wp-media-recovery' ),
 						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
-					'<code>wp-content/uploads</code>',
+					'<code>' . esc_html__( 'wp-content/uploads', 'wp-media-recovery' ) . '</code>',
 				);
 				?>
 			</p>
 
 			<p>
-				<?php echo esc_html__( 'Click on any of the media items below to mark it up for recovery.', 'wp-media-recovery' ); ?>
+				<?php echo esc_html__( 'Click on any media item below to select it for recovery.', 'wp-media-recovery' ); ?>
 			</p>
 
 			<hr />
@@ -170,7 +170,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				</label>
 				<br />
 				<small>
-					* <?php echo esc_html__( 'Hide media found on the server and database.', 'wp-media-recovery' ); ?>
+					* <?php echo esc_html__( 'Hide media already found on the server and in the database.', 'wp-media-recovery' ); ?>
 				</small>
 			</p>
 
@@ -178,13 +178,13 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				<?php
 				printf(
 					wp_kses(
-						/* translators: %2$s is replaced with # of media files */
-						/* translators: %2$s is replaced with wp-content/uploads */
-						__( 'You have total %1$s image files in your %2$s folder.', 'wp-media-recovery' ),
+						/* translators: %2$s is replaced with "# of media files" */
+						/* translators: %2$s is replaced with "wp-content/uploads" */
+						__( 'You have a total of %1$s image files in your %2$s folder.', 'wp-media-recovery' ),
 						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
 					'<strong>' . number_format( $total_files, 0, 2 ) . '</strong>',
-					'<code>wp-content/uploads</code>',
+					'<code>' . esc_html__( 'wp-content/uploads', 'wp-media-recovery' ) . '</code>',
 				);
 				?>
 			</p>
@@ -237,19 +237,19 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<ul>
 				<li>
 					<i class="dashicons dashicons-visibility"></i> 
-					<?php echo esc_html__( 'Files already recovered or found on your server and in your database.', 'wp-media-recovery' ); ?>
+					<?php echo esc_html__( 'Files already recovered or present on your server and in your database.', 'wp-media-recovery' ); ?>
 				</li>
 				<li>
 					<i class="dashicons dashicons-hidden"></i> 
-					<?php echo esc_html__( 'Files not found in your database and available for recovery.', 'wp-media-recovery' ); ?>
+					<?php echo esc_html__( 'Files not found in your database but available for recovery.', 'wp-media-recovery' ); ?>
 				</li>
 				<li>
 					<i class="dashicons dashicons-yes"></i> 
-					<?php echo esc_html__( 'Files selected for recovery and not found in your database.', 'wp-media-recovery' ); ?>
+					<?php echo esc_html__( 'Files selected for recovery that are not found in your database.', 'wp-media-recovery' ); ?>
 				</li>
 				<li>
 					<i class="dashicons dashicons-lock"></i> 
-					<?php echo esc_html__( 'Files that cannot be recovered because they exceed your limits.', 'wp-media-recovery' ); ?>
+					<?php echo esc_html__( 'Files that cannot be recovered because they exceed your server limits.', 'wp-media-recovery' ); ?>
 				</li>
 			</ul>
 		</div>
@@ -264,8 +264,8 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<?php
 			printf(
 				wp_kses(
-					/* translators: %1$s is replaced with Hint */
-					__( '%1$s: Refresh this page manually if the recovering process does not complete within a couple of minutes', 'wp-media-recovery' ),
+					/* translators: %1$s is replaced with "Hint" */
+					__( '%1$s: Refresh the page manually if the recovery process doesn\'t complete within a few minutes.', 'wp-media-recovery' ),
 					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 				),
 				'<strong>' . esc_html__( 'Hint', 'wp-media-recovery' ) . '</strong>'
@@ -279,8 +279,8 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<?php
 			printf(
 				wp_kses(
-					/* translators: %1$s is replaced with DOES NOT upload or overwrite any media on the server */
-					__( '• The plugin %1$s, and it will only scan the default uploads folder.', 'wp-media-recovery' ),
+					/* translators: %1$s is replaced with "DOES NOT upload or overwrite any media on the server" */
+					__( '• The plugin %1$s only scans the default uploads folder.', 'wp-media-recovery' ),
 					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 				),
 				'<strong>' . esc_html__( 'DOES NOT upload or overwrite any media on the server', 'wp-media-recovery' ) . '</strong>'
@@ -292,7 +292,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<?php
 			printf(
 				wp_kses(
-					__( '• The plugin allows you to restore existing media from the uploads folder and re-insert it into the WordPress database the right way.', 'wp-media-recovery' ),
+					__( '• The plugin lets you restore media from the uploads folder and reinsert it into the WordPress database correctly.', 'wp-media-recovery' ),
 					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 				)
 			);
@@ -303,11 +303,11 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<?php
 			printf(
 				wp_kses(
-					/* translators: %1$s is replaced with max_execution_time */
-					__( '• Becasue of your server %1$s time you cannot recover images over 2MB.', 'wp-media-recovery' ),
+					/* translators: %1$s is replaced with "max_execution_time" */
+					__( '• Due to your server\'s %1$s time limit, you cannot recover images larger than 2MB.', 'wp-media-recovery' ),
 					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 				),
-				'<code>max_execution_time</code>',
+				'<code>' . esc_html__( 'max_execution_time', 'wp-media-recovery' ) . '</code>',
 			);
 			?>
 		</p>
@@ -316,7 +316,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<?php
 			printf(
 				wp_kses(
-					__( '• You cannot duplicate or overwirte existing media files and the plugin only supports images.', 'wp-media-recovery' ),
+					__( '• You cannot duplicate or overwrite existing media files, and the plugin only supports images.', 'wp-media-recovery' ),
 					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 				)
 			);
@@ -353,8 +353,8 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				<?php
 				printf(
 					wp_kses(
-						/* translators: %1$s is replaced with "Link to WP.org support forums" */
-						__( 'If something is not clear, please open a ticket on the official plugin %1$s. All tickets should be addressed within a couple of working days.', 'wp-media-recovery' ),
+						/* translators: %1$s is replaced with "Support Forum" */
+						__( 'If something isn\'t clear, please open a ticket on the official plugin %1$s. We aim to address all tickets within a few working days.', 'wp-media-recovery' ),
 						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
 					'<a href="' . esc_url( MLR_PLUGIN_WPORG_SUPPORT ) . '" target="_blank">' . esc_html__( 'Support Forum', 'wp-media-recovery' ) . '</a>'
@@ -388,8 +388,8 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				<?php
 				printf(
 					wp_kses(
-						/* translators: %1$s is replaced with "Link to Patreon account for support" */
-						__( '* For the price of a cup of coffee per month, you can %1$s in continuing to develop and maintain all of my free WordPress plugins, every little bit helps and is greatly appreciated!', 'wp-media-recovery' ),
+						/* translators: %1$s is replaced with "help and support me on Patreon" */
+						__( '* For the price of a cup of coffee per month, you can %1$s for the development and maintenance of all my free WordPress plugins. Every contribution helps and is deeply appreciated!', 'wp-media-recovery' ),
 						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
 					'<a href="https://patreon.com/krasenslavov" target="_blank">' . esc_html__( 'help and support me on Patreon', 'wp-media-recovery' ) . '</a>'

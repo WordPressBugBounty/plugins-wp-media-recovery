@@ -70,7 +70,7 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 		public function get_total_image_files() {
 			$image_files = 0;
 
-			$base_dir = str_replace( '\\', '/', wp_upload_dir()['basedir'] );
+			$base_dir = wp_normalize_path( wp_upload_dir()['basedir'] );
 
 			$iterator = new \RecursiveDirectoryIterator( $base_dir );
 
@@ -112,8 +112,8 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 			$results_to       = $current_page * $results_per_page;
 
 			// Uploads base directory and URL.
-			$base_dir = str_replace( '\\', '/', wp_upload_dir()['basedir'] );
-			$base_url = site_url( '/' ) . str_replace( str_replace( '\\', '/', ABSPATH ), '', $base_dir );
+			$base_dir = wp_normalize_path( wp_upload_dir()['basedir'] );
+			$base_url = site_url( '/' ) . str_replace( wp_normalize_path( ABSPATH ), '', $base_dir );
 
 			$images = $this->get_media_contents( $results_from, $results_to );
 
@@ -188,9 +188,9 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 			$path_parts = pathinfo( $file_path );
 
 			// 2013/12/image.jpg
-			$file_path_rel = str_replace( str_replace( '\\', '/', $wp_uploads_dir['basedir'] . '/' ), '', $file_path );
+			$file_path_rel = str_replace( wp_normalize_path( $wp_uploads_dir['basedir'] . '/' ), '', $file_path );
 			// https://domain.com/wp-content/uploads/image.jpg
-			$file_url = site_url( '/' ) . str_replace( str_replace( '\\', '/', ABSPATH ), '', $file_path );
+			$file_url = site_url( '/' ) . str_replace( wp_normalize_path( ABSPATH ), '', $file_path );
 
 			$attachment_args = array(
 				'guid'           => $file_url,
@@ -218,8 +218,6 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 		 * images in post content to be linked and recovered.
 		 */
 		public function find_post_attachment_id( $image_recovery_url ) {
-			global $wpdb;
-
 			$posts = $this->get_posts_supported();
 
 			foreach ( $posts as $post ) {
@@ -283,7 +281,7 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 			$contents        = array();
 			$results_counter = 0;
 
-			$base_dir = str_replace( '\\', '/', wp_upload_dir()['basedir'] );
+			$base_dir = wp_normalize_path( wp_upload_dir()['basedir'] );
 
 			$iterator = new \RecursiveDirectoryIterator( $base_dir );
 
@@ -291,7 +289,7 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 				// Path partials.
 				$path_parts = pathinfo( $path );
 
-				$file_path = str_replace( '\\', '/', $path_parts['dirname'] . '/' . $path_parts['basename'] );
+				$file_path = wp_normalize_path( $path_parts['dirname'] . '/' . $path_parts['basename'] );
 
 				// Skip . and .. from the directory list.
 				if ( strpos( $path, DIRECTORY_SEPARATOR . '.' ) !== false
@@ -353,7 +351,7 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 
 			return array(
 				'type'     => $type,
-				'fullpath' => str_replace( '\\', '/', $parts['dirname'] ),
+				'fullpath' => wp_normalize_path( $parts['dirname'] ),
 				'filename' => $parts['basename'],
 				'ext'      => $parts['extension'],
 			);
@@ -367,6 +365,15 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 				return;
 			}
 
+			// Get the URL of the WordPress uploads directory
+			$upload_dir = wp_upload_dir();
+			$base_dir   = wp_normalize_path( $upload_dir['basedir'] );
+			$base_url   = $upload_dir['baseurl'];
+
+			// Replace the base directory path with the base URL
+			$file_url         = str_replace( $base_dir, $base_url, wp_normalize_path( $file_path ) );
+			$file_url_preview = admin_url( 'upload.php?item=' . attachment_url_to_postid( $file_url ) );
+
 			$html = '
 				<div class="mlr-media-thumbnail ' . $extra . '">
 					<label>
@@ -376,6 +383,10 @@ if ( ! class_exists( 'Media_Library_Recovery' ) ) {
 					</label>
 				</div>
 			';
+
+			if ( 'in-library' === $extra ) {
+				$html = '<a href="' . $file_url_preview . '" target="_blank" title="' . esc_html__( 'Open in Media Library...', 'wp-media-recovery' ) . '">' . $html . '</a>';
+			}
 
 			return $html;
 		}

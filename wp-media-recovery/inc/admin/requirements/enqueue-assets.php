@@ -24,8 +24,6 @@ function mlr_enqueue_admin_assets() {
 	// $screen = get_current_screen();
 	// if ( strpos( $screen->id, 'mlr_' ) ) {}
 
-	$mlr = new Media_Library_Recovery();
-
 	wp_enqueue_style(
 		'mlr-admin',
 		MLR_PLUGIN_DIR_URL . 'assets/dist/css/mlr-admin.min.css',

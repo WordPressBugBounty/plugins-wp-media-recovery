@@ -41,9 +41,9 @@ function mlr_display_upgrade_notice() {
 				<?php
 				printf(
 					wp_kses(
-						/* translators: %1$s is replaced with Found the free version helpful */
-						/* translators: %2$s is replaced with Media Library Recovery Pro */
-						__( '✨🎉📢 %1$s? Would you be interested in learning more about the benefits of upgrading to the %2$s?', 'wp-media-recovery' ),
+						/* translators: %1$s is replaced with "Found the free version helpful" */
+						/* translators: %2$s is replaced with "Media Library Recovery Pro" */
+						__( '✨🎉📢 %1$s? Discover the added benefits of upgrading to %2$s?', 'wp-media-recovery' ),
 						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 					),
 					'<strong>' . esc_html__( 'Found the free version helpful', 'wp-media-recovery' ) . '</strong>',
@@ -54,9 +54,9 @@ function mlr_display_upgrade_notice() {
 				<?php
 				// printf(
 				// 	wp_kses(
-				// 		/* translators: %1$s is replaced with promo code */
-				// 		/* translators: %2$s is replaced with 10% off */
-				// 		__( 'Use the %1$s code and get %2$s your purchase!', 'wp-media-recovery' ),
+				// 		/* translators: %1$s is replaced with "MLR10" */
+				// 		/* translators: %2$s is replaced with "10% off" */
+				// 		__( 'Use the %1$s promo code and get %2$s your purchase!', 'wp-media-recovery' ),
 				// 		json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 				// 	),
 				// 	'<code>' . esc_html__( 'MLR10', 'wp-media-recovery' ) . '</code>',

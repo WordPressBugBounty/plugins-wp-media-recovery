@@ -77,8 +77,8 @@ if ( ! class_exists( 'MLR_Admin' ) ) {
 		 * otherwise, print an error message.
 		 */
 		public function get_invalid_user_cap() {
-			/* translators: %1$s is replaced with Access denied */
-			$message    = esc_html__( '%1$s! Access denied! Current user does not have the capabilities to access this function.', 'wp-media-recovery' );
+			/* translators: %1$s is replaced with "Access denied" */
+			$message    = esc_html__( '%1$s! Current user does not have the capabilities to access this function.', 'wp-media-recovery' );
 			$values_arr = array( '<strong>' . esc_html__( 'Access denied', 'wp-media-recovery' ) . '</strong>' );
 
 			if ( ! $this->check_user_cap() ) {
@@ -106,8 +106,8 @@ if ( ! class_exists( 'MLR_Admin' ) ) {
 		 * error message with a support email link.
 		 */
 		public function get_invalid_nonce_token() {
-			/* translators: %1$s is replaced with Invalid security toke */
-			/* translators: %2$s is replaced with link to Support email */
+			/* translators: %1$s is replaced with "Invalid security token" */
+			/* translators: %2$s is replaced with "contact@domain.com" */
 			$message    = esc_html__( '%1$s! Contact us @ %2$s.', 'wp-media-recovery' );
 			$values_arr = array(
 				'<strong>' . esc_html__( 'Invalid security token', 'wp-media-recovery' ) . '</strong>',

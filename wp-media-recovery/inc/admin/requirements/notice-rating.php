@@ -26,8 +26,8 @@ function mlr_display_rating_notice() {
 					<?php
 					printf(
 						wp_kses(
-							/* translators: %1$s is replaced with by giving it 5 stars rating */
-							__( '✨💪🔌 Could you please kindly help the plugin in your turn %1$s? (Thank you in advance)', 'wp-media-recovery' ),
+							/* translators: %1$s is replaced with "by giving it 5 stars rating" */
+							__( '✨💪🔌 Could you kindly support the plugin %1$s? Thank you in advance!', 'wp-media-recovery' ),
 							json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
 						),
 						'<strong>' . esc_html__( 'by giving it 5 stars rating', 'wp-media-recovery' ) . '</strong>'
