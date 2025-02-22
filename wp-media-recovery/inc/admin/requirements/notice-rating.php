@@ -18,7 +18,10 @@ namespace DEVRY\MLR;
 function mlr_display_rating_notice() {
 	$mlr_admin = new MLR_Admin();
 
-	if ( ! get_option( 'mlr_rating_notice', '' ) ) {
+	$screen = get_current_screen();
+
+	if ( ! get_option( 'mlr_rating_notice', '' )
+		&& strpos( $screen->id, 'acfc_' ) ) {
 		?>
 			<div class="notice notice-info is-dismissible mlr-admin">
 				<h3><?php echo esc_html( MLR_PLUGIN_NAME ); ?></h3>

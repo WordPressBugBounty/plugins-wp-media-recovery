@@ -36,6 +36,20 @@ function mlr_display_upgrade_notice() {
 	}
 	?>
 		<div class="notice notice-success is-dismissible mlr-admin">
+			<p class="mlr-upgrade-notice-discount">
+				<?php
+				// printf(
+				// 	wp_kses(
+				// 		/* translators: %1$s is replaced with "MLR10" */
+				// 		/* translators: %2$s is replaced with "10% off" */
+				// 		__( 'Use the %1$s promo code and get %2$s your purchase!', 'wp-media-recovery' ),
+				// 		json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
+				// 	),
+				// 	'<code>' . esc_html__( 'MLR10', 'wp-media-recovery' ) . '</code>',
+				// 	'<strong>' . esc_html__( '10% off', 'wp-media-recovery' ) . '</strong>'
+				// );
+				?>
+			</p>
 			<h3><?php echo esc_html__( 'Media Library Recovery PRO 🚀', 'wp-media-recovery' ); ?></h3>
 			<p>
 				<?php
@@ -49,19 +63,6 @@ function mlr_display_upgrade_notice() {
 					'<strong>' . esc_html__( 'Found the free version helpful', 'wp-media-recovery' ) . '</strong>',
 					'<strong>' . esc_html__( 'Media Library Recovery Pro', 'wp-media-recovery' ) . '</strong>'
 				);
-				?>
-				<!-- <br /> -->
-				<?php
-				// printf(
-				// 	wp_kses(
-				// 		/* translators: %1$s is replaced with "MLR10" */
-				// 		/* translators: %2$s is replaced with "10% off" */
-				// 		__( 'Use the %1$s promo code and get %2$s your purchase!', 'wp-media-recovery' ),
-				// 		json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-				// 	),
-				// 	'<code>' . esc_html__( 'MLR10', 'wp-media-recovery' ) . '</code>',
-				// 	'<strong>' . esc_html__( '10% off', 'wp-media-recovery' ) . '</strong>'
-				// );
 				?>
 			</p>
 			<div class="button-group">
