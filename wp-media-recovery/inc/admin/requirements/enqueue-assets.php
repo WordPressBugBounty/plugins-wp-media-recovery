@@ -3,7 +3,7 @@
  * [Short description]
  *
  * @package    DEVRY\MLR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
@@ -20,9 +20,10 @@ function mlr_enqueue_admin_assets() {
 		return;
 	}
 
+	// $mlr = new Media_Library_Recovery();
 	// Load assets only for page page staring with prefix mlr-.
-	// $screen = get_current_screen();
-	// if ( strpos( $screen->id, 'mlr_' ) ) {}
+	// $current_screen = get_current_screen();
+	// if ( strpos( $current_screen->id, 'mlr_' ) ) {}
 
 	wp_enqueue_style(
 		'mlr-admin',

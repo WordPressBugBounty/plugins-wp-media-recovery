@@ -1,3 +1,5 @@
+<!-- @format -->
+
 ### Media Library Recovery - Restore Lost Image Files
 
 Contributors: krasenslavov, developry
@@ -6,7 +8,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -134,6 +136,11 @@ The plugin installation is easy and straightforward. Let us know if you run into
 2. Go to **Media > Library** to view the restored images.
 
 ## CHANGELOG
+
+= 1.6.4 =
+
+- Update - Change year from 2024 -> 2025 all over
+- Fix - Minor JS and CSS fixes
 
 = 1.6.3 =
 

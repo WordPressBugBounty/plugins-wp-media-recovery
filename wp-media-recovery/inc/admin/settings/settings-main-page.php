@@ -3,7 +3,7 @@
  * [Short Description]
  *
  * @package    DEVRY\MLR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
@@ -38,7 +38,6 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<p>
 				<?php echo esc_html__( 'The PRO version offers more features, improved performance, and a faster recovery process.', 'wp-media-recovery' ); ?>
 			</p>
-
 			<table>
 				<tr>
 					<th><?php echo esc_html__( 'Feature', 'wp-media-recovery' ); ?></th>
@@ -116,7 +115,6 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 					<td><?php echo esc_html__( 'first release', 'wp-media-recovery' ); ?></td>
 				</tr>
 			</table>
-
 			<p class="button-group">
 				<a
 					class="button button-primary button-pro"
@@ -134,12 +132,10 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				</a>
 			</p>
 		</div>
-
 		<div class="mlr-explorer">
 			<h2>
 				<?php echo esc_html__( 'Media Library Recovery', 'wp-media-recovery' ); ?>
 			</h2>
-
 			<p>
 				<?php
 				printf(
@@ -152,13 +148,10 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				);
 				?>
 			</p>
-
 			<p>
 				<?php echo esc_html__( 'Click on any media item below to select it for recovery.', 'wp-media-recovery' ); ?>
 			</p>
-
 			<hr />
-
 			<p class="mlr-hide-media">
 				<label>
 					<input 
@@ -173,7 +166,6 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 					* <?php echo esc_html__( 'Hide media already found on the server and in the database.', 'wp-media-recovery' ); ?>
 				</small>
 			</p>
-
 			<p>
 				<?php
 				printf(
@@ -188,11 +180,9 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				);
 				?>
 			</p>
-
 			<div class="mlr-explorer-grid">
 				<?php echo $mlr->display_media_grid(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</div>
-
 			<p>
 				<div class="mlr-explorer-pagination">
 					<div class="button-action">
@@ -231,9 +221,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 					</div>
 				</div>
 			</p>
-
 			<hr />
-
 			<ul>
 				<li>
 					<i class="dashicons dashicons-visibility"></i> 
@@ -253,13 +241,11 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				</li>
 			</ul>
 		</div>
-
 		<p>
 			<a href="javascript:void();" class="button" onclick="window.location.reload( true );">
 				<strong>Reload...</strong>
 			</a>
 		</p>
-
 		<p>
 			<?php
 			printf(
@@ -272,9 +258,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			);
 			?>
 		</p>
-
 		<hr />
-
 		<p>
 			<?php
 			printf(
@@ -287,7 +271,6 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			);
 			?>
 		</p>
-
 		<p>
 			<?php
 			printf(
@@ -298,7 +281,6 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			);
 			?>
 		</p>
-
 		<p>
 			<?php
 			printf(
@@ -311,7 +293,6 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			);
 			?>
 		</p>
-
 		<p>
 			<?php
 			printf(
@@ -322,9 +303,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			);
 			?>
 		</p>
-
 		<hr />
-
 		<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
 			<?php settings_errors( 'mlr_settings_errors' ); ?>
 			<?php wp_nonce_field( 'mlr_settings_nonce', 'mlr_wpnonce' ); ?>
@@ -343,11 +322,8 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				</button>
 			</p>
 		</form>
-
 		<br clear="all" />
-
 		<hr />
-
 		<div class="fip-support-credits">
 			<p>
 				<?php
@@ -380,9 +356,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 				</a>
 			</p>
 		</div>
-
 		<hr />
-
 		<p>
 			<small>
 				<?php

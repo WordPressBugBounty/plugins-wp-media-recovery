@@ -3,7 +3,7 @@
  * Plugin Name: Media Library Recovery
  * Plugin URI: https://mediarecoveryplugin.com/
  * Description: A tool to restore and recover images from your `wp-content/uploads` folder after database resets or failures, ensuring your media library is rebuilt quickly.
- * Version: 1.6.3
+ * Version: 1.6.4
  * Author: Krasen Slavov
  * Author URI: https://developry.com/
  * License: GPLv3 or later
@@ -11,7 +11,7 @@
  * Text Domain: wp-media-recovery
  * Domain Path: /lang
  *
- * Copyright (c) 2018 - 2024 Developry Ltd. (email: contact@developry.com)
+ * Copyright (c) 2018 - 2025 Developry Ltd. (email: contact@developry.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
@@ -39,7 +39,7 @@ define( __NAMESPACE__ . '\MLR_MIN_WP_VERSION', '5.0' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_UUID', 'mlr' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_TEXTDOMAIN', 'wp-media-recovery' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_NAME', esc_html__( 'Media Library Recovery', 'wp-media-recovery' ) );
-define( __NAMESPACE__ . '\MLR_PLUGIN_VERSION', '1.6.3' );
+define( __NAMESPACE__ . '\MLR_PLUGIN_VERSION', '1.6.4' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_DOMAIN', 'mediarecoveryplugin.com' );
 define( __NAMESPACE__ . '\MLR_PLUGIN_DOCS', 'https://mediarecoveryplugin.com/help' );
 

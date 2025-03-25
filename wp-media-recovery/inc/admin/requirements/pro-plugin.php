@@ -3,7 +3,7 @@
  * [Short description]
  *
  * @package    DEVRY\MLR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
@@ -30,13 +30,12 @@ register_activation_hook( MLR_PLUGIN_BASENAME, __NAMESPACE__ . '\mlr_check_pro_p
 function mlr_display_upgrade_notice() {
 	$mlr_admin = new MLR_Admin();
 
-	if ( get_option( 'mlr_upgrade_notice' )
-		&& get_transient( 'mlr_upgrade_plugin' ) ) {
+	if ( get_option( 'mlr_upgrade_notice' ) && get_transient( 'mlr_upgrade_plugin' ) ) {
 		return;
 	}
 	?>
 		<div class="notice notice-success is-dismissible mlr-admin">
-			<p class="mlr-upgrade-notice-discount">
+			<!-- <p class="mlr-upgrade-notice-discount"> -->
 				<?php
 				// printf(
 				// 	wp_kses(
@@ -49,8 +48,10 @@ function mlr_display_upgrade_notice() {
 				// 	'<strong>' . esc_html__( '10% off', 'wp-media-recovery' ) . '</strong>'
 				// );
 				?>
-			</p>
-			<h3><?php echo esc_html__( 'Media Library Recovery PRO 🚀', 'wp-media-recovery' ); ?></h3>
+			<!-- </p> -->
+			<h3>
+				<?php echo esc_html__( 'Media Library Recovery PRO 🚀', 'wp-media-recovery' ); ?>
+			</h3>
 			<p>
 				<?php
 				printf(

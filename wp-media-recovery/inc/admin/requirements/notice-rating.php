@@ -3,7 +3,7 @@
  * [Short description]
  *
  * @package    DEVRY\MLR
- * @copyright  Copyright (c) 2024, Developry Ltd.
+ * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
  * @since      1.4
  */
@@ -18,10 +18,9 @@ namespace DEVRY\MLR;
 function mlr_display_rating_notice() {
 	$mlr_admin = new MLR_Admin();
 
-	$screen = get_current_screen();
+	$current_screen = get_current_screen();
 
-	if ( ! get_option( 'mlr_rating_notice', '' )
-		&& strpos( $screen->id, 'acfc_' ) ) {
+	if ( ! get_option( 'mlr_rating_notice', '' ) && strpos( $current_screen->id, 'mlr_' ) ) {
 		?>
 			<div class="notice notice-info is-dismissible mlr-admin">
 				<h3><?php echo esc_html( MLR_PLUGIN_NAME ); ?></h3>
