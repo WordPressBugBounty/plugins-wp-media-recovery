@@ -52,3 +52,5 @@ function mlr_display_rating_notice() {
 		<?php
 	}
 }
+
+add_action( 'admin_notices', __NAMESPACE__ . '\mlr_display_rating_notice' );

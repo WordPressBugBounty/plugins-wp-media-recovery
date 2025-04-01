@@ -305,6 +305,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 		</p>
 		<hr />
 		<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
+			<div id="mlr-output" class="notice is-dismissible mlr-output"></div>
 			<?php settings_errors( 'mlr_settings_errors' ); ?>
 			<?php wp_nonce_field( 'mlr_settings_nonce', 'mlr_wpnonce' ); ?>
 			<?php

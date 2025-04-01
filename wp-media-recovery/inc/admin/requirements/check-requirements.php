@@ -33,16 +33,6 @@ function mlr_check_requirements() {
 			'admin_enqueue_scripts',
 			__NAMESPACE__ . '\mlr_enqueue_admin_assets'
 		);
-
-		add_action(
-			'admin_notices',
-			__NAMESPACE__ . '\mlr_display_rating_notice'
-		);
-
-		add_action(
-			'admin_notices',
-			__NAMESPACE__ . '\mlr_display_upgrade_notice'
-		);
 	} else {
 		$message = sprintf(
 			wp_kses(
