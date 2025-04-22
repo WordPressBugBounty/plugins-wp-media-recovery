@@ -6,7 +6,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 1.6.5
+Stable tag: 1.6.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -135,6 +135,10 @@ The plugin installation is easy and straightforward. Let us know if you run into
 
 ## CHANGELOG
 
+= 1.6.6 =
+
+- Update - Compatibility tested with WordPress 6.8
+
 = 1.6.5 =
 
 - Update - Performance and optimization compatibility
@@ -173,4 +177,3 @@ The plugin installation is easy and straightforward. Let us know if you run into
 ## UPGRADE NOTICE
 
 Upgrade to [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb) for advanced features, unlimited recovery, and priority support!
-
