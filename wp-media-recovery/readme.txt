@@ -4,7 +4,7 @@ Contributors: krasenslavov, developry
 Donate Link: https://krasenslavov.com/hire-krasen/
 Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.2
 Stable tag: 1.6.6
 License: GPLv3 or later
