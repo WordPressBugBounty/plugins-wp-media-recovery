@@ -6,7 +6,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.6.7
+Stable tag: 1.6.8
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -134,6 +134,10 @@ The plugin installation is easy and straightforward. Let us know if you run into
 2. Go to **Media > Library** to view the restored images.
 
 ## CHANGELOG
+
+= 1.6.8 =
+
+- Fix - Notice `Translation loading for the wp-media-recovery domain was triggered too early`
 
 = 1.6.7 =
 
