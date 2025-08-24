@@ -118,7 +118,7 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 			<p class="button-group">
 				<a
 					class="button button-primary button-pro"
-					href="https://bit.ly/49Ri9Yv"
+					href="https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=pro_table_button"
 					target="_blank"
 				>
 					<?php echo esc_html__( 'GET PRO VERSION', 'wp-media-recovery' ); ?>

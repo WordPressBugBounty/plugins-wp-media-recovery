@@ -24,7 +24,7 @@ function mlr_add_action_links( $links, $file_path ) {
 			. esc_html__( 'Settings', 'wp-media-recovery' )
 			. '</a>';
 
-		$links['mlr-upgrade'] = '<a href="https://bit.ly/3wMEF6c" target="_blank">'
+		$links['mlr-upgrade'] = '<a href="https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=go_pro_link" target="_blank">'
 		. esc_html__( 'Go Pro', 'wp-media-recovery' )
 		. '</a>';
 

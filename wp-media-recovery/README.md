@@ -8,7 +8,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.6.8
+Stable tag: 1.6.9
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,7 +20,7 @@ A tool to restore and recover images from your `wp-content/uploads` folder after
 
 https://www.youtube.com/embed/JRsaCsaF-k4
 
-[**Media Library Recovery**](https://bit.ly/3IHRaTb) helps restore existing image files from the uploads folder and reinsert them into the WordPress database properly.
+[**Media Library Recovery**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md) helps restore existing image files from the uploads folder and reinsert them into the WordPress database properly.
 
 You can recover individual image files or use the filters and navigation in the custom **Media Explorer** to streamline the process.
 
@@ -31,7 +31,7 @@ Once the plugin is uploaded and activated:
 1. Navigate to **Media > Media Recovery** in the main menu to open the **Media Explorer**.
 2. Use the options to show or hide existing image files already found in your server and database.
 
-Here are the steps to use [**Media Library Recovery**](https://bit.ly/3IHRaTb):
+Here are the steps to use [**Media Library Recovery**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md):
 
 1. Open the **Media Explorer**.
 2. Select the image files you want to recover.
@@ -42,7 +42,7 @@ Here are the steps to use [**Media Library Recovery**](https://bit.ly/3IHRaTb):
 
 ## FEATURES & LIMITATIONS
 
-The [**Media Library Recovery**](https://bit.ly/3IHRaTb) plugin allows you to:
+The [**Media Library Recovery**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md) plugin allows you to:
 
 - Restore and recover images after database failure or reset if the files are still on your server.
 - Quickly rebuild your Media Library with the custom **Media Explorer**.
@@ -61,7 +61,7 @@ Find step-by-step setup guides, usage instructions, demos, videos, and insights 
 
 ## MEDIA LIBRARY RECOVERY PRO
 
-If you're using the free version from WordPress.org and want Pro features, you can purchase the premium version on the [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb) website.
+If you're using the free version from WordPress.org and want Pro features, you can purchase the premium version on the [**Media Library Recovery Pro**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md) website.
 
 Here are some features included in the Pro version:
 
@@ -88,19 +88,19 @@ No, the plugin won't duplicate or overwrite existing image files.
 
 ### Does it work with WordPress Multisite?
 
-The free version doesn't support WordPress Multisite. For multisite compatibility, check out [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb).
+The free version doesn't support WordPress Multisite. For multisite compatibility, check out [**Media Library Recovery Pro**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md).
 
 ### Which folders are scanned for lost media?
 
-The free version scans only the default `wp-content/uploads` folder. To scan custom upload folders, use [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb).
+The free version scans only the default `wp-content/uploads` folder. To scan custom upload folders, use [**Media Library Recovery Pro**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md).
 
 ### Can I recover all media files?
 
-The free version only restores and rebuilds images. For support with more file types, check out [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb).
+The free version only restores and rebuilds images. For support with more file types, check out [**Media Library Recovery Pro**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md).
 
 ### Do you offer additional support or customization?
 
-Yes, feel free to send your request via the [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb) website.
+Yes, feel free to send your request via the [**Media Library Recovery Pro**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md) website.
 
 ## SCREENSHOTS
 
@@ -137,9 +137,13 @@ The plugin installation is easy and straightforward. Let us know if you run into
 
 ## CHANGELOG
 
+= 1.6.9 =
+
+- Update - Remove the bitly.com links with raw and direct links with analytics params
+
 = 1.6.8 =
 
-- Fix - Notice `Translation loading for the wp-media-recovery domain was triggered too early`
+- Fix - Notice translation loading for the `wp-media-recovery` domain was triggered too early
 
 = 1.6.7 =
 
@@ -182,8 +186,8 @@ The plugin installation is easy and straightforward. Let us know if you run into
 - Update - Language file (.pot) header text
 - Update - Change license files to use GPLv3
 
-**Check out the complete changelog on our [**Media Library Recovery**](https://bit.ly/3IHRaTb) website.**
+**Check out the complete changelog on our [**Media Library Recovery**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md) website.**
 
 ## UPGRADE NOTICE
 
-Upgrade to [**Media Library Recovery Pro**](https://bit.ly/3IHRaTb) for advanced features, unlimited recovery, and priority support!
+Upgrade to [**Media Library Recovery Pro**](https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=readme_md) for advanced features, unlimited recovery, and priority support!
