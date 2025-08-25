@@ -20,8 +20,6 @@ function mlr_check_requirements() {
 
 	if ( version_compare( PHP_VERSION, MLR_MIN_PHP_VERSION ) >= 0
 		&& version_compare( $GLOBALS['wp_version'], MLR_MIN_WP_VERSION ) >= 0 ) {
-		load_plugin_textdomain( MLR_PLUGIN_TEXTDOMAIN, false, MLR_PLUGIN_BASENAME . 'lang' );
-
 		add_action(
 			'plugin_action_links',
 			__NAMESPACE__ . '\mlr_add_action_links',

@@ -8,7 +8,7 @@ Tags: media, media library, recovery, uploads, restore
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 1.6.9
+Stable tag: 1.7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -136,6 +136,12 @@ The plugin installation is easy and straightforward. Let us know if you run into
 2. Go to **Media > Library** to view the restored images.
 
 ## CHANGELOG
+
+= 1.7.0 =
+
+- Fix - Add proper sanitization missing for `register_setting()`
+- Fix - Added stricter nonce verification using `check_admin_referer()` and `check_ajax_referer()` instead of manual checks; Introduced capability checks (`current_user_can( 'manage_options' )`) before allowing dismiss or update actions; Ensured unauthorized users cannot bypass dismissal or settings updates
+- Update - Remove `load_plugin_textdomain()` has been discouraged since WordPress version 4.6
 
 = 1.6.9 =
 
