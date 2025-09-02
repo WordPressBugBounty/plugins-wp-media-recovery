@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: Media Library Recovery <contact@developry.com>\n"
 "POT-Creation-Date: 2023-03-19 17:19+0200\n"
-"PO-Revision-Date: 2024-12-12 17:19+0200\n"
+"PO-Revision-Date: 2025-09-02 17:19+0200\n"
 "Last-Translator: Krasen Slavov <contact@developry.com>\n"
 "Language-Team: MLR <contact@developry.com>\n"
 "Language: \n"
@@ -18,69 +18,82 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Eazy Po 1.0.0.0\n"
 
-#: media-library-recovery.php:41 inc/admin/settings/settings-main-page.php:140
-#: inc/admin/settings/settings-menu.php:23
-#: inc/admin/settings/settings-menu.php:34
-msgid "Media Library Recovery"
-msgstr ""
-
-#: inc/admin/requirements/action-links.php:23
+#: inc/admin/requirements/action-links.php:24
 msgid "Settings"
 msgstr ""
 
-#: inc/admin/requirements/action-links.php:26
-#: inc/admin/requirements/pro-plugin.php:69
+#: inc/admin/requirements/action-links.php:28
+#: inc/admin/requirements/pro-plugin.php:71
 msgid "Go Pro"
 msgstr ""
 
-#: inc/admin/requirements/check-requirements.php:52
+#: inc/admin/requirements/check-requirements.php:40
 #, php-format
 msgid "%1$s requires a minimum of PHP %2$s and WordPress %3$s"
 msgstr ""
 
-#: inc/admin/requirements/check-requirements.php:64
+#: inc/admin/requirements/check-requirements.php:52
 #, php-format
 msgid "You are currently running PHP %1$s and WordPress %2$s."
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:30
+#: inc/admin/requirements/notice-rating.php:32
 #, php-format
 msgid "✨💪🔌 Could you kindly support the plugin %1$s? Thank you in advance!"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:33
+#: inc/admin/requirements/notice-rating.php:35
 msgid "by giving it 5 stars rating"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:39
+#: inc/admin/requirements/notice-rating.php:41
 msgid "Rate us @ WordPress.org"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:43
-#: inc/admin/requirements/pro-plugin.php:73
+#: inc/admin/requirements/notice-rating.php:45
+#: inc/admin/requirements/pro-plugin.php:75
 msgid "I already did"
 msgstr ""
 
-#: inc/admin/requirements/notice-rating.php:46
-#: inc/admin/requirements/pro-plugin.php:76
+#: inc/admin/requirements/notice-rating.php:48
+#: inc/admin/requirements/pro-plugin.php:78
 msgid "Don't show this notice again!"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:39
+#: inc/admin/requirements/pro-plugin.php:53
 msgid "Media Library Recovery PRO 🚀"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:46
+#: inc/admin/requirements/pro-plugin.php:61
 #, php-format
 msgid "✨🎉📢 %1$s? Discover the added benefits of upgrading to %2$s?"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:49
+#: inc/admin/requirements/pro-plugin.php:64
 msgid "Found the free version helpful"
 msgstr ""
 
-#: inc/admin/requirements/pro-plugin.php:50
+#: inc/admin/requirements/pro-plugin.php:65
 msgid "Media Library Recovery Pro"
+msgstr ""
+
+#: inc/admin/requirements/wp-pointers.php:55
+msgid "Welcome to Media Library Recovery!"
+msgstr ""
+
+#: inc/admin/requirements/wp-pointers.php:59
+#, php-format
+msgid ""
+"%1$s Quickly restore and recover images from your uploads folder using the "
+"%2$s tool."
+msgstr ""
+
+#: inc/admin/requirements/wp-pointers.php:60
+msgid "New!"
+msgstr ""
+
+#: inc/admin/requirements/wp-pointers.php:61
+msgid "Media Explorer"
 msgstr ""
 
 #: inc/admin/settings/compact-mode.php:38
@@ -116,34 +129,44 @@ msgid ""
 "recovery process."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:44
+#: inc/admin/settings/settings-main-page.php:43
 msgid "Feature"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:45
+#: inc/admin/settings/settings-main-page.php:44
 msgid "Free"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:46
+#: inc/admin/settings/settings-main-page.php:45
 msgid "PRO"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:49
+#: inc/admin/settings/settings-main-page.php:48
 msgid "Number of files to recover at a time"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:50
+#: inc/admin/settings/settings-main-page.php:49
 msgid "10"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:51
+#: inc/admin/settings/settings-main-page.php:50
 msgid "unlimited"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:54
+#: inc/admin/settings/settings-main-page.php:53
 msgid ""
 "Recover media libraries with 10,000+ files as a background process with WP-"
 "Cron."
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:54
+#: inc/admin/settings/settings-main-page.php:59
+#: inc/admin/settings/settings-main-page.php:64
+#: inc/admin/settings/settings-main-page.php:69
+#: inc/admin/settings/settings-main-page.php:89
+#: inc/admin/settings/settings-main-page.php:94
+#: inc/admin/settings/settings-main-page.php:109
+msgid "no"
 msgstr ""
 
 #: inc/admin/settings/settings-main-page.php:55
@@ -153,256 +176,252 @@ msgstr ""
 #: inc/admin/settings/settings-main-page.php:90
 #: inc/admin/settings/settings-main-page.php:95
 #: inc/admin/settings/settings-main-page.php:110
-msgid "no"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:56
-#: inc/admin/settings/settings-main-page.php:61
-#: inc/admin/settings/settings-main-page.php:66
-#: inc/admin/settings/settings-main-page.php:71
-#: inc/admin/settings/settings-main-page.php:91
-#: inc/admin/settings/settings-main-page.php:96
-#: inc/admin/settings/settings-main-page.php:111
 msgid "yes"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:59
+#: inc/admin/settings/settings-main-page.php:58
 msgid "Change the default wp-content/uploads folder path"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:64
+#: inc/admin/settings/settings-main-page.php:63
 msgid "Larger files support"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:69
+#: inc/admin/settings/settings-main-page.php:68
 msgid "WordPress multisite support"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:74
+#: inc/admin/settings/settings-main-page.php:73
 msgid "Media type support"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:75
+#: inc/admin/settings/settings-main-page.php:74
 msgid "image-only"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:76
+#: inc/admin/settings/settings-main-page.php:75
 msgid "ALL media"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:79
+#: inc/admin/settings/settings-main-page.php:78
 msgid "Post type support"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:80
+#: inc/admin/settings/settings-main-page.php:79
 msgid "page & post"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:81
+#: inc/admin/settings/settings-main-page.php:80
 msgid "ALL post types"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:84
+#: inc/admin/settings/settings-main-page.php:83
 msgid "Attach media to posts"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:85
-#: inc/admin/settings/settings-main-page.php:100
+#: inc/admin/settings/settings-main-page.php:84
+#: inc/admin/settings/settings-main-page.php:99
 msgid "basic"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:86
+#: inc/admin/settings/settings-main-page.php:85
 msgid "with URL mapping and replacement"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:89
+#: inc/admin/settings/settings-main-page.php:88
 msgid "Backup your uploads folder"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:94
+#: inc/admin/settings/settings-main-page.php:93
 msgid "Better performance and quicker recovery process"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:99
+#: inc/admin/settings/settings-main-page.php:98
 msgid "Search, filter, and sort media files"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:101
+#: inc/admin/settings/settings-main-page.php:100
 msgid "advanced"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:104
+#: inc/admin/settings/settings-main-page.php:103
 msgid "User-friendly media file explorer"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:105
+#: inc/admin/settings/settings-main-page.php:104
 msgid "default"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:106
+#: inc/admin/settings/settings-main-page.php:105
 msgid "pro"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:109
+#: inc/admin/settings/settings-main-page.php:108
 msgid "Priority email support"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:114
+#: inc/admin/settings/settings-main-page.php:113
 msgid "Regular plugin updates"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:115
+#: inc/admin/settings/settings-main-page.php:114
 msgid "delayed"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:116
+#: inc/admin/settings/settings-main-page.php:115
 msgid "first release"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:126
+#: inc/admin/settings/settings-main-page.php:124
 msgid "GET PRO VERSION"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:133
+#: inc/admin/settings/settings-main-page.php:131
 msgid "Watch Video"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:148
+#: inc/admin/settings/settings-main-page.php:137
+#: inc/admin/settings/settings-menu.php:23
+#: inc/admin/settings/settings-menu.php:34
+msgid "Media Library Recovery"
+msgstr ""
+
+#: inc/admin/settings/settings-main-page.php:144
 #, php-format
 msgid ""
 "A tool to restore and recover images from your %1$s folder after database "
 "resets or failures, ensuring your media library is rebuilt quickly."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:151
-#: inc/admin/settings/settings-main-page.php:187
+#: inc/admin/settings/settings-main-page.php:147
+#: inc/admin/settings/settings-main-page.php:179
 msgid "wp-content/uploads"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:157
+#: inc/admin/settings/settings-main-page.php:152
 msgid "Click on any media item below to select it for recovery."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:169
+#: inc/admin/settings/settings-main-page.php:162
 msgid "Hide Existing Media"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:173
+#: inc/admin/settings/settings-main-page.php:166
 msgid "Hide media already found on the server and in the database."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:183
+#: inc/admin/settings/settings-main-page.php:175
 #, php-format
 msgid "You have a total of %1$s image files in your %2$s folder."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:204
+#: inc/admin/settings/settings-main-page.php:194
 msgid "Media Recovery..."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:218
+#: inc/admin/settings/settings-main-page.php:208
 msgid "&larr; Previous Page"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:229
+#: inc/admin/settings/settings-main-page.php:219
 msgid "Next Page &rarr;"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:240
+#: inc/admin/settings/settings-main-page.php:228
 msgid "Files already recovered or present on your server and in your database."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:244
+#: inc/admin/settings/settings-main-page.php:232
 msgid "Files not found in your database but available for recovery."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:248
+#: inc/admin/settings/settings-main-page.php:236
 msgid "Files selected for recovery that are not found in your database."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:252
+#: inc/admin/settings/settings-main-page.php:240
 msgid "Files that cannot be recovered because they exceed your server limits."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:268
+#: inc/admin/settings/settings-main-page.php:254
 #, php-format
 msgid ""
 "%1$s: Refresh the page manually if the recovery process doesn't complete "
 "within a few minutes."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:271
+#: inc/admin/settings/settings-main-page.php:257
 msgid "Hint"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:283
+#: inc/admin/settings/settings-main-page.php:267
 #, php-format
 msgid "• The plugin %1$s only scans the default uploads folder."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:286
+#: inc/admin/settings/settings-main-page.php:270
 msgid "DOES NOT upload or overwrite any media on the server"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:295
+#: inc/admin/settings/settings-main-page.php:278
 msgid ""
 "• The plugin lets you restore media from the uploads folder and reinsert it "
 "into the WordPress database correctly."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:307
+#: inc/admin/settings/settings-main-page.php:289
 #, php-format
 msgid ""
 "• Due to your server's %1$s time limit, you cannot recover images larger "
 "than 2MB."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:310
+#: inc/admin/settings/settings-main-page.php:292
 msgid "max_execution_time"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:319
+#: inc/admin/settings/settings-main-page.php:300
 msgid ""
 "• You cannot duplicate or overwrite existing media files, and the plugin "
 "only supports images."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:342
+#: inc/admin/settings/settings-main-page.php:322
 msgid "Save"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:357
+#: inc/admin/settings/settings-main-page.php:334
 #, php-format
 msgid ""
 "If something isn't clear, please open a ticket on the official plugin %1$s. "
 "We aim to address all tickets within a few working days."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:360
+#: inc/admin/settings/settings-main-page.php:337
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:365
+#: inc/admin/settings/settings-main-page.php:342
 msgid "Please rate us"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:371
+#: inc/admin/settings/settings-main-page.php:348
 msgid "Having issues?"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:373
+#: inc/admin/settings/settings-main-page.php:350
 msgid "Create a Support Ticket"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:377
+#: inc/admin/settings/settings-main-page.php:354
 msgid "Developed by"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:379
+#: inc/admin/settings/settings-main-page.php:356
 msgid "Krasen Slavov @ Developry"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:392
+#: inc/admin/settings/settings-main-page.php:367
 #, php-format
 msgid ""
 "* For the price of a cup of coffee per month, you can %1$s for the "
@@ -410,7 +429,7 @@ msgid ""
 "contribution helps and is deeply appreciated!"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:395
+#: inc/admin/settings/settings-main-page.php:370
 msgid "help and support me on Patreon"
 msgstr ""
 

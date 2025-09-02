@@ -19,3 +19,4 @@ require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/requirements/notice-rating.php';
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/requirements/notice-dismiss.php';
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/requirements/toggle-plugin.php';
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/requirements/pro-plugin.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/requirements/wp-pointers.php';
