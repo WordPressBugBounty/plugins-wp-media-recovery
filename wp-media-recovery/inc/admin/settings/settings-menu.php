@@ -12,27 +12,23 @@ namespace DEVRY\MLR;
 
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
-/**
- * Add the media library recovery page to the admin menu.
- */
-function mlr_add_menu() {
+function mlr_add_settings_menu() {
 	$mlr = new Media_Library_Recovery();
 
 	if ( '' === $mlr->compact_mode ) {
-		add_menu_page(
-			esc_html__( 'Media Library Recovery', 'wp-media-recovery' ),
-			esc_html__( 'Media Recovery', 'wp-media-recovery' ),
+		add_submenu_page(
+			'mlr_media_explorer',
+			esc_html__( 'Options', 'wp-media-recovery' ),
+			null,
 			'manage_options',
 			MLR_SETTINGS_SLUG,
-			__NAMESPACE__ . '\mlr_display_settings_page',
-			'dashicons-image-rotate',
-			9.999
+			__NAMESPACE__ . '\mlr_display_settings_page'
 		);
 	} else {
 		add_submenu_page(
 			'upload.php',
-			esc_html__( 'Media Library Recovery', 'wp-media-recovery' ),
-			esc_html__( 'Media Recovery', 'wp-media-recovery' ),
+			esc_html__( 'Options', 'wp-media-recovery' ),
+			null,
 			'manage_options',
 			MLR_SETTINGS_SLUG,
 			__NAMESPACE__ . '\mlr_display_settings_page'
@@ -40,4 +36,4 @@ function mlr_add_menu() {
 	}
 }
 
-add_action( 'admin_menu', __NAMESPACE__ . '\mlr_add_menu', 1000 );
+add_action( 'admin_menu', __NAMESPACE__ . '\mlr_add_settings_menu', 1000 );

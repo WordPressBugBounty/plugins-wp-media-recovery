@@ -16,8 +16,19 @@ namespace DEVRY\MLR;
 define( __NAMESPACE__ . '\MLR_SETTINGS_SLUG', 'mlr_settings' );
 
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings-menu.php';
-require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings-actions.php';
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings-page.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings-actions.php';
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/settings-register.php';
 
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/file-size-limit.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/file-recovery-limit.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/uploads-folder.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/explorer-folders.php';
 require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/compact-mode.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/hide-existing-media.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/media-types-supported.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/multisite-support.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/dynamic-thumbnails.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/overwrite-image-files.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/post-attachments.php';
+require_once MLR_PLUGIN_DIR_PATH . 'inc/admin/settings/post-types-supported.php';

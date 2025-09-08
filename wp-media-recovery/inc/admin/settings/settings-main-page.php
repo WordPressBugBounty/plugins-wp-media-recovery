@@ -1,36 +1,26 @@
 <?php
 /**
- * [Short Description]
+ * [Short description]
  *
  * @package    DEVRY\MLR
  * @copyright  Copyright (c) 2025, Developry Ltd.
  * @license    https://www.gnu.org/licenses/gpl-3.0.html GNU Public License
- * @since      1.4
+ * @since      1.1
  */
 
 namespace DEVRY\MLR;
 
 ! defined( ABSPATH ) || exit; // Exit if accessed directly.
 
-$mlr       = new Media_Library_Recovery();
 $mlr_admin = new MLR_Admin();
 
-$page = isset( $_REQUEST['p'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['p'] ) ) : '';
-
-$prev_page     = ( isset( $page ) && $page > 1 ) ? ( $page - 1 ) : 1;
-$next_page     = ( isset( $page ) && $page > 0 ) ? ( $page + 1 ) : 2;
-$curr_page     = ( isset( $page ) ) ? (int) $page : 1;
-$total_files   = $mlr->get_total_image_files();
-$total_pages   = ceil( $total_files / $mlr->results_per_page );
-$is_first_page = ( 1 === $curr_page ) ? true : false;
-$is_last_page  = ( $curr_page > $total_pages - 1 ) ? true : false;
-
-$prev_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' . $prev_page );
-$next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' . $next_page );
+$has_user_cap = $mlr_admin->check_user_cap();
 
 ?>
 <div class="mlr-admin">
 	<div class="mlr-container">
+		<div id="mlr-output" class="notice is-dismissible mlr-output"></div>
+		<?php settings_errors( 'mlr_settings_errors' ); ?>
 		<div class="mlr-pro">
 			<h4>
 				<?php echo esc_html__( 'Get the PRO version today!', 'wp-media-recovery' ); ?>
@@ -131,182 +121,56 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 					<?php echo esc_html__( 'Watch Video', 'wp-media-recovery' ); ?>
 				</a>
 			</p>
-		</div>
-		<div class="mlr-explorer">
-			<h2>
-				<?php echo esc_html__( 'Media Library Recovery', 'wp-media-recovery' ); ?>
-			</h2>
+			<p>&nbsp;</p>
 			<p>
 				<?php
 				printf(
-					wp_kses(
-						/* translators: %1$s is replaced with "wp-content/uploads" */
-						__( 'A tool to restore and recover images from your %1$s folder after database resets or failures, ensuring your media library is rebuilt quickly.', 'wp-media-recovery' ),
-						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-					),
-					'<code>' . esc_html__( 'wp-content/uploads', 'wp-media-recovery' ) . '</code>',
+					/* translators: %1$s is replaced with "Need to perform bulk or mass search and replace?" */
+					/* translators: %2$s is replaced with "Get the PRO version now" */
+					wp_kses( '%1$s %2$s!', 'wp-media-recovery', json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
+					'<em>' . esc_html__( 'Need to perform background recovery with extended options and improved media explorer?', 'wp-media-recovery' ) . '</em>',
+					'<a href="https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=pro_table_button" target="_blank"><strong>' . esc_html__( 'Get the PRO version now', 'wp-media-recovery' ) . '</strong></a>'
 				);
 				?>
 			</p>
 			<p>
-				<?php echo esc_html__( 'Click on any media item below to select it for recovery.', 'wp-media-recovery' ); ?>
+				<iframe 
+					height="320" 
+					src="https://www.youtube.com/embed/umEs5RTxuyI" 
+					title="Media Library Recovery" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					allowfullscreen>
+				</iframe>
 			</p>
 			<hr />
-			<p class="mlr-hide-media">
-				<label>
-					<input 
-						type="checkbox" 
-						id="mlr-hide-existing-media"
-						name="mlr-hide-existing-media" 
-					/> 
-					<?php echo esc_html__( 'Hide Existing Media', 'wp-media-recovery' ); ?>
-				</label>
-				<br />
-				<small>
-					* <?php echo esc_html__( 'Hide media already found on the server and in the database.', 'wp-media-recovery' ); ?>
-				</small>
-			</p>
 			<p>
 				<?php
 				printf(
-					wp_kses(
-						/* translators: %2$s is replaced with "# of media files" */
-						/* translators: %2$s is replaced with "wp-content/uploads" */
-						__( 'You have a total of %1$s image files in your %2$s folder.', 'wp-media-recovery' ),
-						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-					),
-					'<strong>' . number_format( $total_files, 0, 2 ) . '</strong>',
-					'<code>' . esc_html__( 'wp-content/uploads', 'wp-media-recovery' ) . '</code>',
+					/* translators: %1$s is replaced with "Note" */
+					wp_kses( '%1$s: Improved media explorer, unlimited files to recover, search, filters, background recovery, and custom options are available only in the PRO version!', 'wp-media-recovery', json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true ) ),
+					'<strong>' . esc_html__( 'Note', 'wp-media-recovery' ) . '</strong>'
 				);
 				?>
 			</p>
-			<div class="mlr-explorer-grid">
-				<?php echo $mlr->display_media_grid(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-			</div>
-			<p>
-				<div class="mlr-explorer-pagination">
-					<div class="button-action">
-						<button
-							class="button button-primary button-large button-recovery"
-							id="mlr-media-recovery-button"
-							name="mlr-media-recovery-button"
-						>
-							<?php echo esc_html__( 'Media Recovery...', 'wp-media-recovery' ); ?>
-						</button>
-						<span></span>
-					</div>
-					<div class="button-group">
-						<a
-							class="button button-primary button-large button-pagination"
-							id="mlr-prev-page-button"
-							name="mlr-prev-page-button"
-							href="<?php echo esc_url( $prev_page_url ); ?>"
-							<?php if ( $is_first_page ) : ?>
-								disabled
-							<?php endif; ?>
-						>
-							<?php echo esc_html__( '&larr; Previous Page', 'wp-media-recovery' ); ?>
-						</a>
-						<a
-							class="button button-primary button-large button-pagination"
-							id="mlr-next-page-button"
-							name="mlr-next-page-button"
-							href="<?php echo esc_url( $next_page_url ); ?>"
-							<?php if ( $is_last_page ) : ?>
-								disabled
-							<?php endif; ?>
-						>
-							<?php echo esc_html__( 'Next Page &rarr;', 'wp-media-recovery' ); ?>
-						</a>
-					</div>
-				</div>
-			</p>
-			<hr />
-			<ul>
-				<li>
-					<i class="dashicons dashicons-visibility"></i> 
-					<?php echo esc_html__( 'Files already recovered or present on your server and in your database.', 'wp-media-recovery' ); ?>
-				</li>
-				<li>
-					<i class="dashicons dashicons-hidden"></i> 
-					<?php echo esc_html__( 'Files not found in your database but available for recovery.', 'wp-media-recovery' ); ?>
-				</li>
-				<li>
-					<i class="dashicons dashicons-yes"></i> 
-					<?php echo esc_html__( 'Files selected for recovery that are not found in your database.', 'wp-media-recovery' ); ?>
-				</li>
-				<li>
-					<i class="dashicons dashicons-lock"></i> 
-					<?php echo esc_html__( 'Files that cannot be recovered because they exceed your server limits.', 'wp-media-recovery' ); ?>
-				</li>
-			</ul>
 		</div>
 		<p>
-			<a href="javascript:void();" class="button" onclick="window.location.reload( true );">
-				<strong>Reload...</strong>
-			</a>
-		</p>
-		<p>
 			<?php
-			printf(
-				wp_kses(
-					/* translators: %1$s is replaced with "Hint" */
-					__( '%1$s: Refresh the page manually if the recovery process doesn\'t complete within a few minutes.', 'wp-media-recovery' ),
-					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-				),
-				'<strong>' . esc_html__( 'Hint', 'wp-media-recovery' ) . '</strong>'
-			);
-			?>
+				printf(
+					wp_kses(
+						/* translators: %1$s is replaced with "Important" */
+						/* translators: %2$s is replaced with "Link to the website" */
+						/* translators: %3$s is replaced with "Get PRO Version" */
+						__( '%1$s: <a href="%2$s" target="_blank">%3$s</a> to able to have a full control over the plugin settings and extend the default mode.', 'wp-media-recovery' ),
+						json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR )
+					),
+					'<strong>' . esc_html__( 'Important', 'wp-media-recovery' ) . '</strong>',
+					esc_url( 'https://mediarecoveryplugin.com/?utm_source=mlr&utm_medium=free_plugin&utm_campaign=pro_badge' ),
+					'<strong>' . esc_html__( 'Get the PRO Version today', 'wp-media-recovery' ) . '</strong>'
+				);
+				?>
 		</p>
-		<hr />
-		<p>
-			<?php
-			printf(
-				wp_kses(
-					/* translators: %1$s is replaced with "DOES NOT upload or overwrite any media on the server" */
-					__( '• The plugin %1$s only scans the default uploads folder.', 'wp-media-recovery' ),
-					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-				),
-				'<strong>' . esc_html__( 'DOES NOT upload or overwrite any media on the server', 'wp-media-recovery' ) . '</strong>'
-			);
-			?>
-		</p>
-		<p>
-			<?php
-			printf(
-				wp_kses(
-					__( '• The plugin lets you restore media from the uploads folder and reinsert it into the WordPress database correctly.', 'wp-media-recovery' ),
-					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-				)
-			);
-			?>
-		</p>
-		<p>
-			<?php
-			printf(
-				wp_kses(
-					/* translators: %1$s is replaced with "max_execution_time" */
-					__( '• Due to your server\'s %1$s time limit, you cannot recover images larger than 2MB.', 'wp-media-recovery' ),
-					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-				),
-				'<code>' . esc_html__( 'max_execution_time', 'wp-media-recovery' ) . '</code>',
-			);
-			?>
-		</p>
-		<p>
-			<?php
-			printf(
-				wp_kses(
-					__( '• You cannot duplicate or overwrite existing media files, and the plugin only supports images.', 'wp-media-recovery' ),
-					json_decode( MLR_PLUGIN_ALLOWED_HTML_ARR, true )
-				)
-			);
-			?>
-		</p>
-		<hr />
 		<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
-			<div id="mlr-output" class="notice is-dismissible mlr-output"></div>
-			<?php settings_errors( 'mlr_settings_errors' ); ?>
 			<?php wp_nonce_field( 'mlr_settings_nonce', 'mlr_wpnonce' ); ?>
 			<?php
 				settings_fields( MLR_SETTINGS_SLUG );
@@ -318,14 +182,28 @@ $next_page_url = admin_url( $mlr_admin->admin_page . MLR_SETTINGS_SLUG . '&p=' .
 					class="button button-primary"
 					id="mlr-save-settings"
 					name="mlr-save-settings"
+					<?php if ( ! $has_user_cap ) : ?>
+						disabled
+					<?php endif; ?>
 				>
 					<?php echo esc_html__( 'Save', 'wp-media-recovery' ); ?>
+				</button>
+				<button
+					type="button"
+					class="button"
+					id="mlr-reset-settings"
+					name="mlr-reset-settings"
+					<?php if ( ! $has_user_cap ) : ?>
+						disabled
+					<?php endif; ?>
+				>
+					<?php echo esc_html__( 'Reset', 'wp-media-recovery' ); ?>
 				</button>
 			</p>
 		</form>
 		<br clear="all" />
 		<hr />
-		<div class="fip-support-credits">
+		<div class="mlr-support-credits">
 			<p>
 				<?php
 				printf(

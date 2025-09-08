@@ -17,7 +17,7 @@ namespace DEVRY\MLR;
  */
 function mlr_enqueue_wp_pointer( $hook_suffix ) {
 	// Only load on your plugin settings page (optional).
-	// if ( 'toplevel_page_mlr_settings' !== $hook_suffix ) {
+	// if ( 'toplevel_page_mlr_media_explorer' !== $hook_suffix ) {
 	// 	return;
 	// }
 
@@ -64,7 +64,7 @@ function mlr_wp_pointer_script() {
 	?>
 	<script type="text/javascript">
 		jQuery(function($) {
-			var $target = $('#toplevel_page_mlr_settings');
+			var $target = $('#toplevel_page_mlr_media_explorer');
 
 			if ($target.length) {
 				$target.pointer({

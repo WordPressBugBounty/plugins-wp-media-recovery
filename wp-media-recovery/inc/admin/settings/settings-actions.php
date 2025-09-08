@@ -52,3 +52,20 @@ function mlr_recover_media() {
 }
 
 add_action( 'wp_ajax_mlr_recover_media', __NAMESPACE__ . '\mlr_recover_media' );
+
+/**
+ * [AJAX] Reset plugin settings to their default values
+ * and provide a success message.
+ */
+function mlr_reset_settings() {
+	$mlr_admin = new MLR_Admin();
+
+	delete_option( 'mlr_compact_mode' );
+
+	$mlr_admin->print_json_message(
+		1,
+		__( 'All options have been reset to their default values.', 'wp-media-recovery' )
+	);
+}
+
+add_action( 'wp_ajax_mlr_reset_settings', __NAMESPACE__ . '\mlr_reset_settings' );

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1.4\n"
 "Report-Msgid-Bugs-To: Media Library Recovery <contact@developry.com>\n"
 "POT-Creation-Date: 2023-03-19 17:19+0200\n"
-"PO-Revision-Date: 2025-09-02 17:19+0200\n"
+"PO-Revision-Date: 2025-09-08 17:19+0200\n"
 "Last-Translator: Krasen Slavov <contact@developry.com>\n"
 "Language-Team: MLR <contact@developry.com>\n"
 "Language: \n"
@@ -17,6 +17,580 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Eazy Po 1.0.0.0\n"
+
+#: inc/admin/nav.php:26
+#, php-format
+msgid ""
+"<a href=\"%1$s\" target=\"_blank\">%2$s</a>! Use the full-featured and "
+"improved media explorer with extened options."
+msgstr ""
+
+#: inc/admin/nav.php:30
+#: inc/admin/media-explorer/media-explorer-main-page.php:647
+#: inc/admin/settings/settings-main-page.php:169
+msgid "Get the PRO Version today"
+msgstr ""
+
+#: inc/admin/nav.php:36
+msgid "Media Library Recovery"
+msgstr ""
+
+#: inc/admin/nav.php:43
+#, php-format
+msgid ""
+"A tool to restore and recover images from your %1$s folder after database "
+"resets or failures, ensuring your media library is rebuilt quickly."
+msgstr ""
+
+#: inc/admin/nav.php:46
+#: inc/admin/media-explorer/media-explorer-main-page.php:506
+#: inc/admin/settings/uploads-folder.php:39
+msgid "wp-content/uploads"
+msgstr ""
+
+#: inc/admin/nav.php:55 inc/admin/requirements/wp-pointers.php:61
+msgid "Media Explorer"
+msgstr ""
+
+#: inc/admin/nav.php:61
+msgid "Backup"
+msgstr ""
+
+#: inc/admin/nav.php:63 inc/admin/nav.php:72 inc/admin/nav.php:87
+#: inc/admin/media-explorer/media-explorer-main-page.php:176
+#: inc/admin/media-explorer/media-explorer-main-page.php:211
+#: inc/admin/media-explorer/media-explorer-main-page.php:250
+#: inc/admin/media-explorer/media-explorer-main-page.php:274
+#: inc/admin/media-explorer/media-explorer-main-page.php:304
+#: inc/admin/media-explorer/media-explorer-main-page.php:340
+#: inc/admin/media-explorer/media-explorer-main-page.php:376
+#: inc/admin/media-explorer/media-explorer-main-page.php:456
+msgid "Pro"
+msgstr ""
+
+#: inc/admin/nav.php:70
+msgid "License"
+msgstr ""
+
+#: inc/admin/nav.php:79 inc/admin/settings/settings-menu.php:21
+#: inc/admin/settings/settings-menu.php:30
+msgid "Options"
+msgstr ""
+
+#: inc/admin/nav.php:85
+msgid "Help"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:36
+#: inc/admin/settings/settings-main-page.php:26
+msgid "Get the PRO version today!"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:39
+#: inc/admin/settings/settings-main-page.php:29
+msgid ""
+"The PRO version offers more features, improved performance, and a faster "
+"recovery process."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:43
+#: inc/admin/settings/settings-main-page.php:33
+msgid "Feature"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:44
+#: inc/admin/settings/settings-main-page.php:34
+msgid "Free"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:45
+#: inc/admin/settings/settings-main-page.php:35
+msgid "PRO"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:48
+#: inc/admin/settings/settings-main-page.php:38
+msgid "Number of files to recover at a time"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:49
+#: inc/admin/settings/settings-main-page.php:39
+msgid "10"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:50
+#: inc/admin/settings/settings-main-page.php:40
+msgid "unlimited"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:53
+#: inc/admin/settings/settings-main-page.php:43
+msgid ""
+"Recover media libraries with 10,000+ files as a background process with WP-"
+"Cron."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:54
+#: inc/admin/media-explorer/media-explorer-main-page.php:59
+#: inc/admin/media-explorer/media-explorer-main-page.php:64
+#: inc/admin/media-explorer/media-explorer-main-page.php:69
+#: inc/admin/media-explorer/media-explorer-main-page.php:89
+#: inc/admin/media-explorer/media-explorer-main-page.php:94
+#: inc/admin/media-explorer/media-explorer-main-page.php:109
+#: inc/admin/settings/settings-main-page.php:44
+#: inc/admin/settings/settings-main-page.php:49
+#: inc/admin/settings/settings-main-page.php:54
+#: inc/admin/settings/settings-main-page.php:59
+#: inc/admin/settings/settings-main-page.php:79
+#: inc/admin/settings/settings-main-page.php:84
+#: inc/admin/settings/settings-main-page.php:99
+msgid "no"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:55
+#: inc/admin/media-explorer/media-explorer-main-page.php:60
+#: inc/admin/media-explorer/media-explorer-main-page.php:65
+#: inc/admin/media-explorer/media-explorer-main-page.php:70
+#: inc/admin/media-explorer/media-explorer-main-page.php:90
+#: inc/admin/media-explorer/media-explorer-main-page.php:95
+#: inc/admin/media-explorer/media-explorer-main-page.php:110
+#: inc/admin/settings/settings-main-page.php:45
+#: inc/admin/settings/settings-main-page.php:50
+#: inc/admin/settings/settings-main-page.php:55
+#: inc/admin/settings/settings-main-page.php:60
+#: inc/admin/settings/settings-main-page.php:80
+#: inc/admin/settings/settings-main-page.php:85
+#: inc/admin/settings/settings-main-page.php:100
+msgid "yes"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:58
+#: inc/admin/settings/settings-main-page.php:48
+msgid "Change the default wp-content/uploads folder path"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:63
+#: inc/admin/settings/settings-main-page.php:53
+msgid "Larger files support"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:68
+#: inc/admin/settings/settings-main-page.php:58
+msgid "WordPress multisite support"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:73
+#: inc/admin/settings/settings-main-page.php:63
+msgid "Media type support"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:74
+#: inc/admin/settings/settings-main-page.php:64
+msgid "image-only"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:75
+#: inc/admin/settings/settings-main-page.php:65
+msgid "ALL media"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:78
+#: inc/admin/settings/settings-main-page.php:68
+msgid "Post type support"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:79
+#: inc/admin/settings/settings-main-page.php:69
+msgid "page & post"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:80
+#: inc/admin/settings/settings-main-page.php:70
+msgid "ALL post types"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:83
+#: inc/admin/settings/settings-main-page.php:73
+msgid "Attach media to posts"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:84
+#: inc/admin/media-explorer/media-explorer-main-page.php:99
+#: inc/admin/settings/settings-main-page.php:74
+#: inc/admin/settings/settings-main-page.php:89
+msgid "basic"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:85
+#: inc/admin/settings/settings-main-page.php:75
+msgid "with URL mapping and replacement"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:88
+#: inc/admin/settings/settings-main-page.php:78
+msgid "Backup your uploads folder"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:93
+#: inc/admin/settings/settings-main-page.php:83
+msgid "Better performance and quicker recovery process"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:98
+#: inc/admin/settings/settings-main-page.php:88
+msgid "Search, filter, and sort media files"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:100
+#: inc/admin/settings/settings-main-page.php:90
+msgid "advanced"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:103
+#: inc/admin/settings/settings-main-page.php:93
+msgid "User-friendly media file explorer"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:104
+#: inc/admin/settings/settings-main-page.php:94
+msgid "default"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:105
+#: inc/admin/settings/settings-main-page.php:95
+msgid "pro"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:108
+#: inc/admin/settings/settings-main-page.php:98
+msgid "Priority email support"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:113
+#: inc/admin/settings/settings-main-page.php:103
+msgid "Regular plugin updates"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:114
+#: inc/admin/settings/settings-main-page.php:104
+msgid "delayed"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:115
+#: inc/admin/settings/settings-main-page.php:105
+msgid "first release"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:124
+#: inc/admin/settings/settings-main-page.php:114
+msgid "GET PRO VERSION"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:131
+#: inc/admin/settings/settings-main-page.php:121
+msgid "Watch Video"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:141
+#: inc/admin/settings/settings-main-page.php:131
+msgid ""
+"Need to perform background recovery with extended options and improved media "
+"explorer?"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:142
+#: inc/admin/settings/settings-main-page.php:132
+msgid "Get the PRO version now"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:162
+#: inc/admin/settings/settings-main-page.php:152
+msgid "Note"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:173
+msgid "Search Mode"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:185
+msgid "Enter search keywords..."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:194
+msgid "Search"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:198
+msgid "Use keywords to search media for recovery."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:208
+msgid "Quick Mode"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:218
+msgid "Infinite Scroll"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:222
+msgid "Enable infinte scroll to show all you items on one page."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:227
+#: inc/admin/media-explorer/media-explorer-main-page.php:489
+#: inc/admin/settings/settings-page.php:81
+msgid "Hide Existing Media"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:231
+msgid "Hide media found on the server and database."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:236
+msgid "Select All"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:240
+msgid "Select all items available for recovery on this page."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:247
+msgid "Display Mode"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:257
+msgid "Gallery"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:263
+msgid "List"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:271
+msgid "Density Mode"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:281
+msgid "Default"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:287
+msgid "Comfortable"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:293
+msgid "Compact"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:301
+msgid "Items per Page"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:311
+msgid "25"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:317
+msgid "50"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:323
+msgid "100"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:329
+msgid "200"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:337
+msgid "Sort By"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:347
+msgid "Name"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:353
+msgid "Type"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:359
+msgid "Size"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:365
+msgid "Date Created"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:373
+msgid "Filter By"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:383
+msgid "All"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:389
+msgid "Images"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:395
+msgid "Audio"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:401
+msgid "Video"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:407
+msgid "Documents"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:413
+msgid "Spreadsheets"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:419
+msgid "Archives"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:432
+#: inc/admin/settings/settings-main-page.php:189
+msgid "Save"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:440
+#: inc/admin/settings/settings-main-page.php:200
+msgid "Reset"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:444
+msgid "Save your explorer filters to apply and remember them."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:453
+msgid "Background Mode"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:466
+msgid "Start Recovery..."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:469
+msgid ""
+"Run a background process to recover all media files from folders chosen in "
+"Options."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:480
+msgid "Click on any media item below to select it for recovery."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:493
+msgid "Hide media already found on the server and in the database."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:502
+#, php-format
+msgid "You have a total of %1$s image files in your %2$s folder."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:527
+msgid "Media Recovery..."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:541
+msgid "&larr; Previous Page"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:552
+msgid "Next Page &rarr;"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:560
+msgid "Files already recovered or present on your server and in your database."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:563
+msgid "Files not found in your database but available for recovery."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:566
+msgid "Files selected for recovery that are not found in your database."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:569
+msgid ""
+"Files that cannot be recovered because they exceed the limits set in Options."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:581
+#, php-format
+msgid ""
+"%1$s: Refresh the page manually if the recovery process doesn't complete "
+"within a few minutes."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:584
+msgid "Hint"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:594
+#, php-format
+msgid "• The plugin %1$s only scans the default uploads folder."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:597
+msgid "DOES NOT upload or overwrite any media on the server"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:605
+msgid ""
+"• The plugin lets you restore media from the uploads folder and reinsert it "
+"into the WordPress database correctly."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:616
+#, php-format
+msgid ""
+"• Due to your server's %1$s time limit, you cannot recover images larger "
+"than 2MB."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:619
+msgid "max_execution_time"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:627
+msgid ""
+"• You cannot duplicate or overwrite existing media files, and the plugin "
+"only supports images."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:643
+#, php-format
+msgid ""
+"• <a href=\"%1$s\" target=\"_blank\">%2$s</a> to use the full-featured media "
+"explorer with additional options and functionalities."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:655
+#, php-format
+msgid ""
+"• The %1$s button will refresh the page if the recovery process gets stuck "
+"for any reason."
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-main-page.php:658
+msgid "Reload"
+msgstr ""
+
+#: inc/admin/media-explorer/media-explorer-menu.php:20
+#: inc/admin/media-explorer/media-explorer-menu.php:21
+#: inc/admin/media-explorer/media-explorer-menu.php:31
+#: inc/admin/media-explorer/media-explorer-menu.php:32
+msgid "Media Recovery"
+msgstr ""
 
 #: inc/admin/requirements/action-links.php:24
 msgid "Settings"
@@ -92,16 +666,81 @@ msgstr ""
 msgid "New!"
 msgstr ""
 
-#: inc/admin/requirements/wp-pointers.php:61
-msgid "Media Explorer"
-msgstr ""
-
 #: inc/admin/settings/compact-mode.php:38
 msgid "Compact mode moves the plugin access link under Media."
 msgstr ""
 
 #: inc/admin/settings/compact-mode.php:66
 msgid "Compact mode option was updated successfully."
+msgstr ""
+
+#: inc/admin/settings/dynamic-thumbnails.php:30
+#, php-format
+msgid "Generate dynamic thumbnails on the fly. (%1$s)."
+msgstr ""
+
+#: inc/admin/settings/dynamic-thumbnails.php:33
+msgid "Optimize the Media Explorer for large libraries"
+msgstr ""
+
+#: inc/admin/settings/explorer-folders.php:28
+msgid "Choose folders to include in the media explorer."
+msgstr ""
+
+#: inc/admin/settings/file-recovery-limit.php:40
+#, php-format
+msgid "Set a custom file recovery limit per request. (%1$s)."
+msgstr ""
+
+#: inc/admin/settings/file-recovery-limit.php:43
+msgid "Use a lower number for larger files or server limitations"
+msgstr ""
+
+#: inc/admin/settings/file-size-limit.php:40
+#, php-format
+msgid "Overwrite the default file size limit of 4MB. (%1$s)."
+msgstr ""
+
+#: inc/admin/settings/file-size-limit.php:43
+msgid "Maximum limit is 10MB; use 0 for unlimited"
+msgstr ""
+
+#: inc/admin/settings/hide-existing-media.php:30
+#, php-format
+msgid "Automatically hide existing media in the explorer. (%1$s)."
+msgstr ""
+
+#: inc/admin/settings/hide-existing-media.php:33
+msgid "Media already in your library will be hidden by default"
+msgstr ""
+
+#: inc/admin/settings/media-types-supported.php:30
+msgid "Choose the media file types to display in the explorer."
+msgstr ""
+
+#: inc/admin/settings/multisite-support.php:26
+msgid "Scan the media folder structure in a WordPress multisite setup."
+msgstr ""
+
+#: inc/admin/settings/overwrite-image-files.php:30
+#, php-format
+msgid "Overwrite image files with the same base name. (%1$s)."
+msgstr ""
+
+#: inc/admin/settings/overwrite-image-files.php:33
+msgid ""
+"Show only one instance for images with identical file names but different "
+"extensions"
+msgstr ""
+
+#: inc/admin/settings/post-attachments.php:26
+msgid ""
+"Automatically attach newly recovered media to posts and update URLs in the "
+"content."
+msgstr ""
+
+#: inc/admin/settings/post-types-supported.php:26
+msgid "Choose the post types supported by the plugin."
 msgstr ""
 
 #: inc/admin/settings/settings-actions.php:38
@@ -119,309 +758,53 @@ msgstr ""
 msgid "Something went wrong!"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:36
-msgid "Get the PRO version today!"
+#: inc/admin/settings/settings-actions.php:67
+msgid "All options have been reset to their default values."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:39
-msgid ""
-"The PRO version offers more features, improved performance, and a faster "
-"recovery process."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:43
-msgid "Feature"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:44
-msgid "Free"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:45
-msgid "PRO"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:48
-msgid "Number of files to recover at a time"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:49
-msgid "10"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:50
-msgid "unlimited"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:53
-msgid ""
-"Recover media libraries with 10,000+ files as a background process with WP-"
-"Cron."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:54
-#: inc/admin/settings/settings-main-page.php:59
-#: inc/admin/settings/settings-main-page.php:64
-#: inc/admin/settings/settings-main-page.php:69
-#: inc/admin/settings/settings-main-page.php:89
-#: inc/admin/settings/settings-main-page.php:94
-#: inc/admin/settings/settings-main-page.php:109
-msgid "no"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:55
-#: inc/admin/settings/settings-main-page.php:60
-#: inc/admin/settings/settings-main-page.php:65
-#: inc/admin/settings/settings-main-page.php:70
-#: inc/admin/settings/settings-main-page.php:90
-#: inc/admin/settings/settings-main-page.php:95
-#: inc/admin/settings/settings-main-page.php:110
-msgid "yes"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:58
-msgid "Change the default wp-content/uploads folder path"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:63
-msgid "Larger files support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:68
-msgid "WordPress multisite support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:73
-msgid "Media type support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:74
-msgid "image-only"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:75
-msgid "ALL media"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:78
-msgid "Post type support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:79
-msgid "page & post"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:80
-msgid "ALL post types"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:83
-msgid "Attach media to posts"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:84
-#: inc/admin/settings/settings-main-page.php:99
-msgid "basic"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:85
-msgid "with URL mapping and replacement"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:88
-msgid "Backup your uploads folder"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:93
-msgid "Better performance and quicker recovery process"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:98
-msgid "Search, filter, and sort media files"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:100
-msgid "advanced"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:103
-msgid "User-friendly media file explorer"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:104
-msgid "default"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:105
-msgid "pro"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:108
-msgid "Priority email support"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:113
-msgid "Regular plugin updates"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:114
-msgid "delayed"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:115
-msgid "first release"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:124
-msgid "GET PRO VERSION"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:131
-msgid "Watch Video"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:137
-#: inc/admin/settings/settings-menu.php:23
-#: inc/admin/settings/settings-menu.php:34
-msgid "Media Library Recovery"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:144
+#: inc/admin/settings/settings-main-page.php:164
 #, php-format
 msgid ""
-"A tool to restore and recover images from your %1$s folder after database "
-"resets or failures, ensuring your media library is rebuilt quickly."
+"%1$s: <a href=\"%2$s\" target=\"_blank\">%3$s</a> to able to have a full "
+"control over the plugin settings and extend the default mode."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:147
-#: inc/admin/settings/settings-main-page.php:179
-msgid "wp-content/uploads"
+#: inc/admin/settings/settings-main-page.php:167
+msgid "Important"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:152
-msgid "Click on any media item below to select it for recovery."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:162
-msgid "Hide Existing Media"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:166
-msgid "Hide media already found on the server and in the database."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:175
-#, php-format
-msgid "You have a total of %1$s image files in your %2$s folder."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:194
-msgid "Media Recovery..."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:208
-msgid "&larr; Previous Page"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:219
-msgid "Next Page &rarr;"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:228
-msgid "Files already recovered or present on your server and in your database."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:232
-msgid "Files not found in your database but available for recovery."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:236
-msgid "Files selected for recovery that are not found in your database."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:240
-msgid "Files that cannot be recovered because they exceed your server limits."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:254
-#, php-format
-msgid ""
-"%1$s: Refresh the page manually if the recovery process doesn't complete "
-"within a few minutes."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:257
-msgid "Hint"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:267
-#, php-format
-msgid "• The plugin %1$s only scans the default uploads folder."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:270
-msgid "DOES NOT upload or overwrite any media on the server"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:278
-msgid ""
-"• The plugin lets you restore media from the uploads folder and reinsert it "
-"into the WordPress database correctly."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:289
-#, php-format
-msgid ""
-"• Due to your server's %1$s time limit, you cannot recover images larger "
-"than 2MB."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:292
-msgid "max_execution_time"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:300
-msgid ""
-"• You cannot duplicate or overwrite existing media files, and the plugin "
-"only supports images."
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:322
-msgid "Save"
-msgstr ""
-
-#: inc/admin/settings/settings-main-page.php:334
+#: inc/admin/settings/settings-main-page.php:212
 #, php-format
 msgid ""
 "If something isn't clear, please open a ticket on the official plugin %1$s. "
 "We aim to address all tickets within a few working days."
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:337
+#: inc/admin/settings/settings-main-page.php:215
 msgid "Support Forum"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:342
+#: inc/admin/settings/settings-main-page.php:220
 msgid "Please rate us"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:348
+#: inc/admin/settings/settings-main-page.php:226
 msgid "Having issues?"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:350
+#: inc/admin/settings/settings-main-page.php:228
 msgid "Create a Support Ticket"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:354
+#: inc/admin/settings/settings-main-page.php:232
 msgid "Developed by"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:356
+#: inc/admin/settings/settings-main-page.php:234
 msgid "Krasen Slavov @ Developry"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:367
+#: inc/admin/settings/settings-main-page.php:245
 #, php-format
 msgid ""
 "* For the price of a cup of coffee per month, you can %1$s for the "
@@ -429,17 +812,57 @@ msgid ""
 "contribution helps and is deeply appreciated!"
 msgstr ""
 
-#: inc/admin/settings/settings-main-page.php:370
+#: inc/admin/settings/settings-main-page.php:248
 msgid "help and support me on Patreon"
 msgstr ""
 
-#: inc/admin/settings/settings-menu.php:24
-#: inc/admin/settings/settings-menu.php:35
-msgid "Media Recovery"
+#: inc/admin/settings/settings-page.php:31
+msgid "File Size Limit"
 msgstr ""
 
-#: inc/admin/settings/settings-page.php:33
+#: inc/admin/settings/settings-page.php:41
+msgid "File Recovery Limit"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:51
+msgid "Uploads Base Folder"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:61
+msgid "Explorer Folders"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:71
+msgid "Post Types Supported"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:91
+msgid "Media Types Supported"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:101
+msgid "Post Attachments"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:111
+msgid "Dynamic Thumbnails"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:121
+msgid "Overwrite Image Files"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:131
+msgid "Multisite Support"
+msgstr ""
+
+#: inc/admin/settings/settings-page.php:141
 msgid "Compact Mode"
+msgstr ""
+
+#: inc/admin/settings/uploads-folder.php:36
+#, php-format
+msgid "Change the base %1$s path of the WordPress uploads folder."
 msgstr ""
 
 #: inc/library/class-media-library-recovery.php:388
